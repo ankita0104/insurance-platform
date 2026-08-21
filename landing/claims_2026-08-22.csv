@@ -1,0 +1,151 @@
+claim_id,policy_id,claim_date,claim_type,claim_amount,status,state
+CLM00001,POL0083,2026-08-22,theft,17888.09,approved,California
+CLM00002,POL0138,2026-08-22,collision,16582.86,approved,Illinois
+CLM00003,POL0055,2026-08-22,collision,4050.44,denied,California
+CLM00004,POL0062,2026-08-22,collision,24886.92,approved,Illinois
+CLM00005,POL0032,2026-08-22,theft,28452.04,approved,California
+CLM00006,POL0148,2026-08-22,medical,17971.29,approved,California
+CLM00007,POL0143,2026-08-22,theft,13174.5,approved,Illinois
+CLM00008,POL0031,2026-08-22,medical,14019.99,approved,California
+CLM00009,POL0149,2026-08-22,medical,28823.32,pending,California
+CLM00010,POL0141,2026-08-22,liability,3012.95,approved,Illinois
+CLM00011,POL0053,2026-08-22,water_damage,30681.92,denied,New York
+CLM00012,POL0120,2026-08-22,medical,41570.17,pending,New York
+CLM00013,POL0064,2026-08-22,theft,31514.95,approved,California
+CLM00014,POL0148,2026-08-22,fire,23728.8,pending,Washington
+CLM00015,POL0115,2026-08-22,fire,27481.36,approved,California
+CLM00016,POL0132,2026-08-22,water_damage,7590.3,pending,Texas
+CLM00017,POL0126,2026-08-22,water_damage,1956.49,approved,Illinois
+CLM00018,POL0147,2026-08-22,fire,15437.48,pending,Illinois
+CLM00019,POL0128,2026-08-22,medical,35900.76,approved,California
+CLM00020,POL0070,2026-08-22,water_damage,31427.48,approved,California
+CLM00021,POL0188,2026-08-22,liability,14070.41,approved,Washington
+CLM00022,POL0115,2026-08-22,fire,32304.93,pending,California
+CLM00023,POL0119,2026-08-22,fire,7728.57,approved,Florida
+CLM00024,POL0016,2026-08-22,theft,34616.84,approved,Washington
+CLM00025,POL0064,2026-08-22,water_damage,17714.55,denied,California
+CLM00026,POL0043,2026-08-22,water_damage,18193.66,pending,Texas
+CLM00027,POL0111,2026-08-22,medical,12673.26,denied,New York
+CLM00028,POL0175,2026-08-22,water_damage,43106.36,approved,California
+CLM00029,POL0046,2026-08-22,theft,10591.67,approved,California
+CLM00030,POL0125,2026-08-22,medical,8368.96,pending,California
+CLM00031,POL0038,2026-08-22,water_damage,24149.68,approved,Illinois
+CLM00032,POL0082,2026-08-22,theft,31134.12,approved,Illinois
+CLM00033,POL0168,2026-08-22,liability,33342.36,denied,Washington
+CLM00034,POL0144,2026-08-22,water_damage,18033.52,denied,California
+CLM00035,POL0124,2026-08-22,liability,18139.83,approved,California
+CLM00036,POL0054,2026-08-22,water_damage,7471.18,pending,Illinois
+CLM00037,POL0014,2026-08-22,collision,210.45,approved,Illinois
+CLM00038,POL0026,2026-08-22,fire,27695.43,approved,Texas
+CLM00039,POL0158,2026-08-22,water_damage,6855.06,pending,New York
+CLM00040,POL0155,2026-08-22,fire,21441.99,approved,Florida
+CLM00041,POL0120,2026-08-22,water_damage,21875.79,approved,Texas
+CLM00042,POL0027,2026-08-22,liability,15550.09,pending,Florida
+CLM00043,POL0178,2026-08-22,theft,23331.79,approved,Illinois
+CLM00044,POL0093,2026-08-22,theft,31115.03,approved,Illinois
+CLM00045,POL0077,2026-08-22,liability,38876.96,pending,Illinois
+CLM00046,POL0094,2026-08-22,theft,16135.19,approved,Illinois
+CLM00047,POL0139,2026-08-22,medical,14968.99,approved,Illinois
+CLM00048,POL0195,2026-08-22,theft,36312.32,denied,Washington
+CLM00049,POL0059,2026-08-22,theft,23390.21,pending,Washington
+CLM00050,POL0008,2026-08-22,collision,35597.11,denied,New York
+CLM00051,POL0050,2026-08-22,liability,27310.23,pending,Florida
+CLM00052,POL0186,2026-08-22,fire,42984.03,pending,California
+CLM00053,POL0057,2026-08-22,collision,10362.69,approved,New York
+CLM00054,POL0053,2026-08-22,water_damage,28158.17,approved,California
+CLM00055,POL0123,2026-08-22,liability,15611.51,approved,Washington
+CLM00056,POL0031,2026-08-22,water_damage,35247.17,approved,Florida
+CLM00057,POL0046,2026-08-22,water_damage,35553.27,pending,California
+CLM00058,POL0185,2026-08-22,water_damage,20949.59,approved,Washington
+CLM00059,POL0041,2026-08-22,theft,44691.43,approved,Texas
+CLM00060,POL0152,2026-08-22,water_damage,36331.29,approved,Illinois
+CLM00061,POL0153,2026-08-22,water_damage,29645.62,pending,Texas
+CLM00062,POL0141,2026-08-22,medical,6068.08,approved,Washington
+CLM00063,POL0167,2026-08-22,collision,23790.83,approved,Florida
+CLM00064,POL0050,2026-08-22,theft,1454.12,approved,New York
+CLM00065,POL0129,2026-08-22,theft,34412.85,pending,New York
+CLM00066,POL0140,2026-08-22,water_damage,37571.94,approved,Washington
+CLM00067,POL0091,2026-08-22,water_damage,29878.87,approved,Florida
+CLM00068,POL0129,2026-08-22,theft,24025.76,approved,Illinois
+CLM00069,POL0005,2026-08-22,water_damage,34987.48,approved,California
+CLM00070,POL0199,2026-08-22,theft,7921.13,denied,Illinois
+CLM00071,POL0186,2026-08-22,collision,25130.11,pending,Washington
+CLM00072,POL0133,2026-08-22,medical,25083.8,approved,Illinois
+CLM00073,POL0015,2026-08-22,theft,8770.51,approved,California
+CLM00074,POL0130,2026-08-22,water_damage,25365.48,approved,Florida
+CLM00075,POL0084,2026-08-22,medical,43806.54,approved,Illinois
+CLM00076,POL0052,2026-08-22,liability,12617.91,approved,Illinois
+CLM00077,POL0123,2026-08-22,medical,42379.25,approved,New York
+CLM00078,POL0144,2026-08-22,theft,37831.99,approved,Florida
+CLM00079,POL0032,2026-08-22,water_damage,20006.89,approved,Washington
+CLM00080,POL0062,2026-08-22,water_damage,3475.81,pending,California
+CLM00081,POL0199,2026-08-22,theft,42289.81,pending,Texas
+CLM00082,POL0065,2026-08-22,theft,43546.01,approved,Washington
+CLM00083,POL0025,2026-08-22,water_damage,39844.99,approved,Washington
+CLM00084,POL0058,2026-08-22,theft,31843.3,approved,Florida
+CLM00085,POL0087,2026-08-22,water_damage,8969.36,pending,California
+CLM00086,POL0185,2026-08-22,fire,1072.84,approved,Florida
+CLM00087,POL0113,2026-08-22,liability,1010.07,pending,Illinois
+CLM00088,POL0160,2026-08-22,fire,23149.35,approved,California
+CLM00089,POL0059,2026-08-22,collision,3965.94,pending,California
+CLM00090,POL0200,2026-08-22,theft,12315.99,approved,Florida
+CLM00091,POL0174,2026-08-22,fire,18386.46,approved,Illinois
+CLM00092,POL0147,2026-08-22,water_damage,31578.7,approved,New York
+CLM00093,POL0015,2026-08-22,liability,8413.81,approved,New York
+CLM00094,POL0005,2026-08-22,liability,4167.75,pending,California
+CLM00095,POL0156,2026-08-22,theft,3184.69,approved,Florida
+CLM00096,POL0003,2026-08-22,fire,44744.9,denied,New York
+CLM00097,POL0160,2026-08-22,theft,2135.61,approved,California
+CLM00098,POL0042,2026-08-22,fire,2457.01,approved,New York
+CLM00099,POL0161,2026-08-22,fire,23992.65,approved,New York
+CLM00100,POL0115,2026-08-22,medical,30312.64,pending,New York
+CLM00101,POL0005,2026-08-22,fire,1855.33,approved,Washington
+CLM00102,POL0130,2026-08-22,medical,44016.71,approved,Florida
+CLM00103,POL0063,2026-08-22,water_damage,4961.4,denied,Washington
+CLM00104,POL0127,2026-08-22,medical,37590.7,denied,Illinois
+CLM00105,POL0079,2026-08-22,liability,9840.11,approved,New York
+CLM00106,POL0051,2026-08-22,liability,32852.22,approved,Florida
+CLM00107,POL0089,2026-08-22,collision,37697.08,approved,California
+CLM00108,POL0161,2026-08-22,liability,39617.47,denied,Texas
+CLM00109,POL0015,2026-08-22,collision,30002.2,denied,Illinois
+CLM00110,POL0172,2026-08-22,fire,27025.27,pending,California
+CLM00111,POL0118,2026-08-22,theft,7257.48,denied,California
+CLM00112,POL0068,2026-08-22,fire,43288.04,approved,New York
+CLM00113,POL0063,2026-08-22,collision,43461.87,pending,Texas
+CLM00114,POL0092,2026-08-22,theft,247.89,denied,California
+CLM00115,POL0122,2026-08-22,fire,22723.83,approved,Texas
+CLM00116,POL0130,2026-08-22,collision,4270.16,approved,Texas
+CLM00117,POL0103,2026-08-22,medical,2066.68,approved,New York
+CLM00118,POL0078,2026-08-22,liability,10629.87,approved,Illinois
+CLM00119,POL0193,2026-08-22,theft,29657.96,approved,Florida
+CLM00120,POL0196,2026-08-22,fire,32486.34,denied,Texas
+CLM00121,POL0073,2026-08-22,liability,27918.08,approved,California
+CLM00122,POL0184,2026-08-22,medical,28304.48,approved,Texas
+CLM00123,POL0135,2026-08-22,medical,25667.88,approved,Washington
+CLM00124,POL0150,2026-08-22,liability,30793.71,approved,California
+CLM00125,POL0008,2026-08-22,collision,6162.58,pending,California
+CLM00126,POL0097,2026-08-22,water_damage,25222.02,approved,Washington
+CLM00127,POL0137,2026-08-22,liability,11156.27,pending,California
+CLM00128,POL0117,2026-08-22,collision,33722.29,approved,Illinois
+CLM00129,POL0024,2026-08-22,liability,23764.36,denied,New York
+CLM00130,POL0020,2026-08-22,fire,10718.4,approved,Texas
+CLM00131,POL0190,2026-08-22,liability,43912.93,denied,Florida
+CLM00132,POL0020,2026-08-22,water_damage,40988.91,pending,California
+CLM00133,POL0158,2026-08-22,liability,28995.78,approved,Illinois
+CLM00134,POL0038,2026-08-22,fire,11576.52,pending,Illinois
+CLM00135,POL0146,2026-08-22,theft,758.62,approved,Florida
+CLM00136,POL0069,2026-08-22,liability,4658.45,approved,Washington
+CLM00137,POL0126,2026-08-22,fire,31957.42,pending,Florida
+CLM00138,POL0120,2026-08-22,water_damage,34569.21,approved,Texas
+CLM00139,POL0080,2026-08-22,collision,42144.19,approved,New York
+CLM00140,POL0118,2026-08-22,collision,36931.42,denied,New York
+CLM00141,POL0100,2026-08-22,theft,41261.65,approved,California
+CLM00142,POL0149,2026-08-22,collision,6549.98,approved,New York
+CLM00143,POL0093,2026-08-22,theft,27230.79,approved,New York
+CLM00144,POL0029,2026-08-22,liability,16560.45,denied,Florida
+CLM00145,POL0101,2026-08-22,collision,7326.12,denied,Washington
+CLM00146,POL0116,2026-08-22,water_damage,13727.41,approved,Florida
+CLM00147,POL0089,2026-08-22,water_damage,14360.3,pending,California
+CLM00148,POL0084,2026-08-22,fire,37792.16,approved,Texas
+CLM00149,POL0183,2026-08-22,collision,40590.18,pending,New York
+CLM00150,POL0096,2026-08-22,collision,17801.89,approved,California
