@@ -1,0 +1,201 @@
+policy_id,policyholder,state,product_type,annual_premium,start_date,status
+POL0001,Patel,Florida,Health,2368.5,2023-04-26,lapsed
+POL0002,Davis,Texas,Renters,2035.4,2020-01-12,cancelled
+POL0003,Nguyen,California,Home,2860.63,2021-04-23,active
+POL0004,Nguyen,Washington,Health,2309.26,2020-06-18,lapsed
+POL0005,Johnson,Washington,Life,471.99,2025-02-04,active
+POL0006,Brown,Texas,Renters,2658.22,2023-08-05,active
+POL0007,Smith,Florida,Home,631.33,2021-04-22,cancelled
+POL0008,Johnson,California,Renters,1876.61,2023-04-11,active
+POL0009,Davis,Florida,Life,1532.18,2023-09-13,active
+POL0010,Brown,Florida,Life,483.19,2020-03-23,lapsed
+POL0011,Smith,Florida,Auto,2106.34,2025-09-08,cancelled
+POL0012,Lopez,New York,Renters,3437.98,2020-03-22,active
+POL0013,Kumar,New York,Life,2761.74,2022-04-04,active
+POL0014,Johnson,Texas,Health,1562.11,2025-01-22,cancelled
+POL0015,Garcia,Florida,Home,3380.43,2024-01-12,lapsed
+POL0016,Davis,Florida,Home,3302.49,2021-03-18,active
+POL0017,Brown,Florida,Health,578.04,2022-01-28,active
+POL0018,Chen,California,Health,1170.64,2023-02-28,active
+POL0019,Patel,Texas,Health,553.15,2021-11-17,lapsed
+POL0020,Smith,Texas,Life,2865.18,2022-10-25,lapsed
+POL0021,Brown,Illinois,Health,1354.73,2024-10-09,active
+POL0022,Smith,Florida,Home,3357.32,2020-05-19,active
+POL0023,Garcia,Illinois,Health,1197.31,2023-03-05,active
+POL0024,Johnson,Florida,Auto,978.71,2025-08-26,active
+POL0025,Johnson,California,Life,792.24,2024-06-13,lapsed
+POL0026,Garcia,Illinois,Home,962.88,2023-04-23,cancelled
+POL0027,Smith,Illinois,Renters,3108.99,2020-01-13,lapsed
+POL0028,Johnson,Florida,Renters,943.42,2025-04-09,cancelled
+POL0029,Kumar,Washington,Auto,1158.6,2021-05-24,active
+POL0030,Davis,Illinois,Health,3339.47,2020-09-20,active
+POL0031,Davis,Illinois,Life,3398.05,2022-05-23,cancelled
+POL0032,Davis,Illinois,Home,597.54,2022-04-12,active
+POL0033,Kumar,Washington,Health,733.58,2020-11-03,lapsed
+POL0034,Davis,Illinois,Auto,2507.67,2025-08-16,cancelled
+POL0035,Davis,Florida,Health,618.1,2020-01-22,lapsed
+POL0036,Smith,Texas,Life,2582.96,2023-12-14,lapsed
+POL0037,Garcia,Florida,Health,1415.25,2021-11-21,active
+POL0038,Smith,Florida,Home,1924.84,2025-10-07,lapsed
+POL0039,Lopez,Washington,Renters,2566.98,2025-05-08,lapsed
+POL0040,Brown,Florida,Life,2305.6,2024-12-01,active
+POL0041,Kumar,Texas,Life,3114.56,2025-03-03,cancelled
+POL0042,Patel,California,Renters,1338.07,2023-12-24,lapsed
+POL0043,Johnson,Texas,Health,1038.04,2022-06-21,cancelled
+POL0044,Garcia,New York,Auto,3348.84,2022-09-09,active
+POL0045,Davis,Texas,Home,2253.7,2022-12-13,active
+POL0046,Nguyen,Florida,Health,1754.33,2024-11-09,active
+POL0047,Nguyen,Illinois,Life,706.77,2021-01-12,active
+POL0048,Smith,California,Renters,2198.06,2023-10-15,lapsed
+POL0049,Garcia,California,Renters,858.43,2022-04-15,active
+POL0050,Smith,New York,Home,818.35,2023-09-27,active
+POL0051,Chen,Texas,Health,1649.21,2024-04-08,cancelled
+POL0052,Lopez,Florida,Auto,2442.01,2020-02-14,active
+POL0053,Patel,California,Health,2927.13,2024-09-20,lapsed
+POL0054,Brown,Washington,Life,873.39,2021-06-10,active
+POL0055,Smith,California,Auto,977.68,2020-11-27,active
+POL0056,Kumar,New York,Life,582.16,2020-10-16,active
+POL0057,Nguyen,Texas,Auto,722.74,2022-09-09,lapsed
+POL0058,Garcia,Washington,Home,2656.23,2024-07-03,active
+POL0059,Garcia,Texas,Renters,525.48,2022-10-18,active
+POL0060,Smith,Washington,Life,1930.82,2021-08-26,active
+POL0061,Chen,Washington,Auto,1073.67,2025-10-18,cancelled
+POL0062,Johnson,New York,Health,1051.46,2023-12-26,active
+POL0063,Smith,New York,Home,2302.14,2024-01-25,lapsed
+POL0064,Patel,Texas,Renters,1951.57,2023-04-08,cancelled
+POL0065,Davis,New York,Health,2693.88,2022-02-08,lapsed
+POL0066,Lopez,Texas,Life,2073.52,2022-10-05,active
+POL0067,Nguyen,Illinois,Auto,3451.33,2025-04-24,active
+POL0068,Garcia,Illinois,Renters,1548.15,2024-05-04,active
+POL0069,Garcia,Washington,Health,2302.19,2023-08-25,active
+POL0070,Garcia,New York,Home,1733.4,2023-04-16,lapsed
+POL0071,Chen,California,Renters,3062.11,2021-01-26,active
+POL0072,Lopez,Florida,Life,2683.29,2025-04-06,lapsed
+POL0073,Patel,Florida,Auto,411.61,2025-10-10,cancelled
+POL0074,Brown,Texas,Health,1104.53,2025-09-26,lapsed
+POL0075,Smith,California,Life,3240.83,2021-08-11,lapsed
+POL0076,Kumar,Florida,Renters,2348.27,2024-12-23,active
+POL0077,Chen,California,Life,2433.31,2025-08-26,active
+POL0078,Garcia,Illinois,Life,3160.85,2020-12-10,active
+POL0079,Patel,Texas,Life,723.09,2024-05-21,active
+POL0080,Davis,Texas,Home,1942.46,2025-08-07,active
+POL0081,Kumar,Washington,Renters,1541.38,2021-03-10,active
+POL0082,Chen,Washington,Health,587.35,2024-11-17,active
+POL0083,Garcia,Illinois,Health,1912.56,2024-09-12,lapsed
+POL0084,Smith,Washington,Life,842.15,2023-08-21,lapsed
+POL0085,Davis,Illinois,Home,1761.26,2021-01-28,lapsed
+POL0086,Garcia,Illinois,Renters,2722.34,2022-08-05,active
+POL0087,Smith,New York,Life,2546.33,2022-04-02,lapsed
+POL0088,Patel,Texas,Home,432.06,2021-03-08,cancelled
+POL0089,Johnson,Texas,Renters,2394.47,2025-07-04,active
+POL0090,Garcia,Washington,Home,2069.98,2020-04-08,cancelled
+POL0091,Lopez,California,Home,1031.39,2024-09-23,active
+POL0092,Nguyen,New York,Life,2900.07,2025-06-26,lapsed
+POL0093,Smith,Illinois,Health,543.87,2023-10-16,active
+POL0094,Smith,Washington,Auto,2814.9,2022-08-24,active
+POL0095,Davis,Texas,Life,1456.66,2025-08-21,active
+POL0096,Nguyen,New York,Auto,757.86,2024-02-16,active
+POL0097,Patel,Washington,Home,1366.55,2023-02-09,lapsed
+POL0098,Garcia,California,Life,2711.8,2023-09-23,active
+POL0099,Brown,Texas,Renters,3137.91,2025-04-02,lapsed
+POL0100,Chen,Illinois,Life,1748.14,2020-07-17,active
+POL0101,Patel,California,Home,1064.12,2022-01-22,active
+POL0102,Brown,Texas,Life,2038.18,2023-04-09,cancelled
+POL0103,Patel,Washington,Life,1888.37,2022-06-28,active
+POL0104,Chen,Washington,Auto,3124.91,2021-12-10,active
+POL0105,Davis,Florida,Home,2636.75,2020-11-19,active
+POL0106,Chen,Texas,Renters,2776.78,2021-02-28,active
+POL0107,Garcia,Florida,Home,1947.86,2025-11-17,active
+POL0108,Patel,Washington,Health,1580.38,2022-03-17,lapsed
+POL0109,Smith,Texas,Auto,2738.53,2021-08-04,lapsed
+POL0110,Smith,California,Life,745.1,2024-10-10,lapsed
+POL0111,Chen,Florida,Health,3348.01,2024-02-09,active
+POL0112,Smith,Washington,Health,2988.27,2022-08-21,active
+POL0113,Chen,New York,Home,2042.74,2025-11-12,active
+POL0114,Patel,California,Life,2862.63,2021-01-11,active
+POL0115,Patel,New York,Home,1964.34,2020-01-06,active
+POL0116,Lopez,Washington,Renters,1118.87,2021-06-20,active
+POL0117,Lopez,Texas,Auto,938.81,2025-05-14,active
+POL0118,Kumar,Texas,Health,1590.49,2022-12-24,active
+POL0119,Garcia,New York,Life,1105.8,2023-04-03,cancelled
+POL0120,Brown,Florida,Home,979.28,2024-08-02,lapsed
+POL0121,Brown,California,Renters,1908.22,2021-09-04,cancelled
+POL0122,Smith,Washington,Auto,3462.39,2024-03-24,active
+POL0123,Johnson,Florida,Auto,2179.91,2022-10-28,lapsed
+POL0124,Brown,Florida,Life,978.01,2022-11-25,active
+POL0125,Chen,California,Home,894.48,2023-11-11,cancelled
+POL0126,Chen,New York,Health,2065.76,2020-06-18,cancelled
+POL0127,Smith,California,Home,3154.31,2023-06-16,active
+POL0128,Davis,Texas,Renters,1866.85,2021-11-19,active
+POL0129,Kumar,Illinois,Renters,2710.88,2024-07-25,active
+POL0130,Chen,Texas,Home,3428.18,2024-03-04,active
+POL0131,Chen,Florida,Health,2249.91,2022-04-17,active
+POL0132,Johnson,Illinois,Auto,3027.83,2024-02-07,cancelled
+POL0133,Patel,Washington,Auto,1982.51,2024-09-26,active
+POL0134,Nguyen,Washington,Health,3489.29,2025-07-09,cancelled
+POL0135,Patel,Florida,Home,447.33,2022-07-14,active
+POL0136,Chen,Washington,Health,1924.13,2024-12-08,active
+POL0137,Kumar,New York,Life,3378.29,2024-07-17,active
+POL0138,Chen,Washington,Home,3366.04,2021-03-04,active
+POL0139,Garcia,Texas,Renters,935.39,2024-09-24,cancelled
+POL0140,Johnson,California,Auto,3028.72,2023-10-20,active
+POL0141,Patel,Florida,Health,2944.35,2023-01-06,active
+POL0142,Patel,Illinois,Health,2395.77,2023-03-13,lapsed
+POL0143,Kumar,California,Home,2397.83,2021-02-04,active
+POL0144,Smith,California,Health,2881.83,2022-09-13,lapsed
+POL0145,Chen,California,Health,566.83,2024-10-09,active
+POL0146,Kumar,Illinois,Health,675.17,2020-08-13,lapsed
+POL0147,Brown,Florida,Life,3140.56,2020-07-08,active
+POL0148,Lopez,New York,Home,1864.04,2022-10-26,cancelled
+POL0149,Nguyen,Texas,Health,1578.39,2022-04-11,active
+POL0150,Chen,New York,Health,481.04,2025-02-09,active
+POL0151,Johnson,Florida,Health,1390.1,2023-06-13,active
+POL0152,Davis,New York,Auto,2825.58,2021-03-18,active
+POL0153,Garcia,New York,Health,2042.58,2024-07-16,active
+POL0154,Davis,Texas,Auto,2891.76,2023-12-16,active
+POL0155,Nguyen,Texas,Home,1256.36,2021-01-06,active
+POL0156,Smith,New York,Renters,1631.65,2025-12-07,cancelled
+POL0157,Johnson,Florida,Life,3001.49,2024-05-25,active
+POL0158,Garcia,Florida,Health,1711.28,2020-06-16,active
+POL0159,Smith,California,Renters,3173.12,2020-08-18,cancelled
+POL0160,Nguyen,New York,Health,2601.07,2020-10-28,active
+POL0161,Smith,New York,Life,1350.63,2025-01-05,cancelled
+POL0162,Patel,Illinois,Auto,2966.73,2024-03-13,cancelled
+POL0163,Davis,Texas,Auto,3432.94,2022-07-23,active
+POL0164,Davis,New York,Health,1870.55,2022-02-16,active
+POL0165,Garcia,Illinois,Life,1073.12,2021-08-23,lapsed
+POL0166,Lopez,Texas,Auto,2044.02,2023-05-03,active
+POL0167,Patel,New York,Auto,830.75,2025-10-08,lapsed
+POL0168,Garcia,Texas,Life,3045.35,2022-01-28,active
+POL0169,Patel,Washington,Life,1276.42,2025-05-10,active
+POL0170,Nguyen,New York,Home,3091.45,2024-03-28,active
+POL0171,Davis,California,Life,1161.73,2022-11-18,cancelled
+POL0172,Nguyen,Texas,Renters,1375.24,2021-09-01,cancelled
+POL0173,Smith,Illinois,Auto,2878.77,2021-08-22,lapsed
+POL0174,Brown,Illinois,Home,2977.55,2024-07-14,active
+POL0175,Patel,Illinois,Renters,2086.14,2022-08-04,cancelled
+POL0176,Davis,Florida,Life,1222.87,2020-05-01,active
+POL0177,Garcia,New York,Health,2950.43,2021-02-11,active
+POL0178,Brown,Washington,Life,1773.93,2025-07-12,lapsed
+POL0179,Garcia,Washington,Renters,980.78,2024-04-24,cancelled
+POL0180,Brown,Illinois,Auto,1567.64,2020-06-05,lapsed
+POL0181,Lopez,New York,Renters,3208.32,2023-07-11,active
+POL0182,Garcia,Florida,Life,2170.44,2021-09-02,active
+POL0183,Kumar,New York,Renters,2869.45,2024-11-01,active
+POL0184,Smith,Florida,Life,1784.8,2021-11-24,active
+POL0185,Smith,Texas,Home,2554.72,2023-02-20,lapsed
+POL0186,Patel,Illinois,Home,639.53,2020-10-03,lapsed
+POL0187,Nguyen,Illinois,Auto,813.54,2025-07-19,active
+POL0188,Patel,Washington,Auto,3475.82,2024-12-21,active
+POL0189,Patel,Texas,Life,2809.04,2025-09-04,active
+POL0190,Patel,Florida,Life,2632.57,2020-12-19,active
+POL0191,Davis,Illinois,Health,1707.48,2025-01-14,active
+POL0192,Smith,Texas,Life,3186.4,2025-12-15,active
+POL0193,Chen,Washington,Renters,1484.45,2025-11-18,active
+POL0194,Lopez,California,Life,1099.8,2022-07-04,active
+POL0195,Smith,Texas,Life,2110.21,2023-01-28,active
+POL0196,Chen,New York,Auto,1776.55,2020-03-12,active
+POL0197,Garcia,Texas,Home,801.18,2025-10-26,lapsed
+POL0198,Davis,California,Life,1784.37,2024-03-05,active
+POL0199,Kumar,California,Health,648.41,2022-11-09,active
+POL0200,Garcia,New York,Home,2252.47,2023-06-06,lapsed
