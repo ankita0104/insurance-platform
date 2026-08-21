@@ -1,0 +1,46 @@
+claim_id,policy_id,claim_date,claim_type,claim_amount,status,state
+CLM00151,POL0104,2026-08-23,water_damage,9163.38,approved,Texas
+CLM00152,POL0064,2026-08-23,theft,34242.51,pending,Washington
+CLM00153,POL0099,2026-08-23,medical,30857.03,approved,California
+CLM00154,POL0160,2026-08-23,water_damage,9136.17,approved,Illinois
+CLM00155,POL0056,2026-08-23,fire,37040.18,approved,Texas
+CLM00156,POL0119,2026-08-23,liability,8219.24,approved,New York
+CLM00157,POL0022,2026-08-23,liability,23886.48,approved,Florida
+CLM00158,POL0081,2026-08-23,water_damage,2110.79,approved,California
+CLM00159,POL0109,2026-08-23,theft,16441.41,approved,California
+CLM00160,POL0119,2026-08-23,medical,40530.85,approved,Florida
+CLM00161,POL0014,2026-08-23,fire,5985.46,approved,Washington
+CLM00162,POL0114,2026-08-23,medical,41633.14,approved,Illinois
+CLM00163,POL0170,2026-08-23,theft,1860.39,approved,Texas
+CLM00164,POL0122,2026-08-23,liability,36921.13,approved,Florida
+CLM00165,POL0162,2026-08-23,collision,6602.44,approved,California
+CLM00166,POL0098,2026-08-23,fire,6284.56,denied,Texas
+CLM00167,POL0015,2026-08-23,liability,9672.3,pending,Illinois
+CLM00168,POL0104,2026-08-23,theft,16050.62,denied,California
+CLM00169,POL0034,2026-08-23,liability,38904.04,approved,Washington
+CLM00170,POL0039,2026-08-23,medical,42366.81,approved,California
+CLM00171,POL0031,2026-08-23,theft,13459.63,approved,Florida
+CLM00172,POL0038,2026-08-23,theft,39643.29,pending,Florida
+CLM00173,POL0060,2026-08-23,fire,5451.15,pending,Texas
+CLM00174,POL0174,2026-08-23,collision,22655.23,approved,Illinois
+CLM00175,POL0013,2026-08-23,fire,9891.23,denied,New York
+CLM00176,POL0103,2026-08-23,water_damage,18750.12,pending,Illinois
+CLM00177,POL0024,2026-08-23,theft,39604.66,pending,Washington
+CLM00178,POL0103,2026-08-23,water_damage,10513.4,approved,Washington
+CLM00179,POL0185,2026-08-23,fire,4937.54,pending,Texas
+CLM00180,POL0196,2026-08-23,liability,30408.49,approved,Florida
+CLM00181,POL0076,2026-08-23,water_damage,33867.48,approved,Florida
+CLM00182,POL0108,2026-08-23,fire,3321.51,pending,Washington
+CLM00183,POL0083,2026-08-23,water_damage,24089.34,pending,Florida
+CLM00184,POL0075,2026-08-23,water_damage,43571.51,approved,Texas
+CLM00185,POL0073,2026-08-23,water_damage,30585.26,approved,Illinois
+CLM00186,POL0171,2026-08-23,liability,19914.4,denied,New York
+CLM00187,POL0051,2026-08-23,fire,393.15,pending,Washington
+CLM00188,POL0076,2026-08-23,theft,40131.54,approved,Washington
+CLM00189,POL0067,2026-08-23,liability,18868.73,approved,Florida
+CLM00190,POL0089,2026-08-23,liability,18115.55,approved,Illinois
+CLM00001,POL0137,2026-08-22,theft,257.9,pending,Washington
+CLM00002,POL0192,2026-08-22,theft,23097.99,denied,Texas
+CLM00003,POL0068,2026-08-22,liability,38345.06,denied,Florida
+CLM00004,POL0144,2026-08-22,medical,28243.76,approved,New York
+CLM00005,POL0052,2026-08-22,liability,1123.68,approved,New York
