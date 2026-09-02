@@ -1,0 +1,10 @@
+# dbt_project.yml -- project settings for the insurance dbt project.
+name: 'insurance'
+version: '1.0.0'
+profile: 'insurance'          # points to the 'insurance' profile in profiles.yml
+
+model-paths: ["models"]
+
+models:
+  insurance:
+    +materialized: table      # build models as real tables

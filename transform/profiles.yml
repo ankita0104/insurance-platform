@@ -1,0 +1,8 @@
+# profiles.yml -- the database connection for the insurance project.
+insurance:                          # matches 'profile:' in dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/insurance.duckdb   # our insurance database (relative to this folder)
+      threads: 1
