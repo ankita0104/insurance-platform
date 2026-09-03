@@ -2034,3 +2034,212 @@ parsing.
 [0m15:43:33.256077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114037170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1140fa120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1140fa390>]}
 [0m15:43:33.256873 [debug] [MainThread]: Flushing usage events
 [0m15:43:34.915762 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:25:25.021710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c4b8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e0e5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e0e300>]}
+
+
+============================== 14:25:25.024907 | f222fc5b-cbbb-4723-91a4-ddb36ad0968a ==============================
+[0m14:25:25.024907 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:25:25.025268 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'log_cache_events': 'False', 'printer_width': '80', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'target_path': 'None', 'debug': 'False', 'invocation_command': 'dbt run --select dim_policy --profiles-dir .', 'quiet': 'False', 'log_path': '/Users/ankita/insurance-platform/transform/logs', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'introspect': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'use_colors': 'True', 'static_parser': 'True', 'no_print': 'None', 'write_json': 'True'}
+[0m14:25:25.240395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f222fc5b-cbbb-4723-91a4-ddb36ad0968a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f11700>]}
+[0m14:25:25.271212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f222fc5b-cbbb-4723-91a4-ddb36ad0968a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044a7020>]}
+[0m14:25:25.272672 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:25:25.335551 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:25:25.402166 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m14:25:25.402519 [debug] [MainThread]: Partial parsing: added file: insurance://models/marts/dim_policy.sql
+[0m14:25:25.528962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f222fc5b-cbbb-4723-91a4-ddb36ad0968a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10760eed0>]}
+[0m14:25:25.567595 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m14:25:25.569841 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m14:25:25.610162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f222fc5b-cbbb-4723-91a4-ddb36ad0968a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073cd100>]}
+[0m14:25:25.610501 [info ] [MainThread]: Found 3 models, 7 data tests, 485 macros
+[0m14:25:25.610709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f222fc5b-cbbb-4723-91a4-ddb36ad0968a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045ccfe0>]}
+[0m14:25:25.611531 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m14:25:25.611845 [debug] [MainThread]: Command end result
+[0m14:25:25.626890 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m14:25:25.628000 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m14:25:25.629949 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ankita/insurance-platform/transform/target/run_results.json
+[0m14:25:25.632137 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.6562197, "process_in_blocks": "0", "process_kernel_time": 0.244286, "process_mem_max_rss": "145719296", "process_out_blocks": "0", "process_user_time": 1.185381}
+[0m14:25:25.632402 [debug] [MainThread]: Command `dbt run` succeeded at 14:25:25.632355 after 0.66 seconds
+[0m14:25:25.632606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106696f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104145b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107608e00>]}
+[0m14:25:25.632796 [debug] [MainThread]: Flushing usage events
+[0m14:25:27.313493 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:25:58.234618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ef79b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cf66c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cf63f0>]}
+
+
+============================== 14:25:58.237645 | fee41fa6-0314-4f70-9015-00b2fd6b3dc6 ==============================
+[0m14:25:58.237645 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:25:58.238011 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'write_json': 'True', 'warn_error': 'None', 'quiet': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'profiles_dir': '.', 'invocation_command': 'dbt run --select dim_policy --profiles-dir .', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'partial_parse': 'True', 'log_path': '/Users/ankita/insurance-platform/transform/logs', 'target_path': 'None', 'empty': 'False', 'debug': 'False', 'printer_width': '80', 'static_parser': 'True', 'version_check': 'True', 'introspect': 'True'}
+[0m14:25:58.436093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fee41fa6-0314-4f70-9015-00b2fd6b3dc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11074d4c0>]}
+[0m14:25:58.466307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fee41fa6-0314-4f70-9015-00b2fd6b3dc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ef79b0>]}
+[0m14:25:58.467701 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:25:58.531742 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:25:58.598314 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:25:58.598708 [debug] [MainThread]: Partial parsing: updated file: insurance://models/marts/dim_policy.sql
+[0m14:25:58.722304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fee41fa6-0314-4f70-9015-00b2fd6b3dc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112286120>]}
+[0m14:25:58.760517 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m14:25:58.762188 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m14:25:58.800647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fee41fa6-0314-4f70-9015-00b2fd6b3dc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126a5d60>]}
+[0m14:25:58.800980 [info ] [MainThread]: Found 3 models, 7 data tests, 485 macros
+[0m14:25:58.801191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fee41fa6-0314-4f70-9015-00b2fd6b3dc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126a4920>]}
+[0m14:25:58.802051 [info ] [MainThread]: 
+[0m14:25:58.802255 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:25:58.802415 [info ] [MainThread]: 
+[0m14:25:58.802666 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:25:58.803102 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_insurance'
+[0m14:25:58.848792 [debug] [ThreadPool]: Using duckdb connection "list_insurance"
+[0m14:25:58.849070 [debug] [ThreadPool]: On list_insurance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "list_insurance"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"insurance"'
+    
+  
+  
+[0m14:25:58.849248 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:25:58.871428 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m14:25:58.872515 [debug] [ThreadPool]: On list_insurance: Close
+[0m14:25:58.872960 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_insurance, now create_insurance_main)
+[0m14:25:58.873225 [debug] [ThreadPool]: Creating schema "database: "insurance"
+schema: "main"
+"
+[0m14:25:58.876770 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m14:25:58.876976 [debug] [ThreadPool]: On create_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "create_insurance_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='insurance'
+        and type='sqlite'
+    
+  
+[0m14:25:58.877139 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:25:58.878167 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:25:58.878844 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m14:25:58.879015 [debug] [ThreadPool]: On create_insurance_main: BEGIN
+[0m14:25:58.879256 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:25:58.879409 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m14:25:58.879559 [debug] [ThreadPool]: On create_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "create_insurance_main"} */
+
+    
+    
+        create schema if not exists "insurance"."main"
+    
+[0m14:25:58.879859 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:25:58.880278 [debug] [ThreadPool]: On create_insurance_main: COMMIT
+[0m14:25:58.880434 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m14:25:58.880574 [debug] [ThreadPool]: On create_insurance_main: COMMIT
+[0m14:25:58.880788 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:25:58.880940 [debug] [ThreadPool]: On create_insurance_main: Close
+[0m14:25:58.883561 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_insurance_main, now list_insurance_main)
+[0m14:25:58.886357 [debug] [ThreadPool]: Using duckdb connection "list_insurance_main"
+[0m14:25:58.886545 [debug] [ThreadPool]: On list_insurance_main: BEGIN
+[0m14:25:58.886693 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:25:58.886956 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:25:58.887111 [debug] [ThreadPool]: Using duckdb connection "list_insurance_main"
+[0m14:25:58.887272 [debug] [ThreadPool]: On list_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "list_insurance_main"} */
+select
+      'insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'insurance'
+  
+[0m14:25:58.890493 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:25:58.891232 [debug] [ThreadPool]: On list_insurance_main: ROLLBACK
+[0m14:25:58.892110 [debug] [ThreadPool]: Failed to rollback 'list_insurance_main'
+[0m14:25:58.892276 [debug] [ThreadPool]: On list_insurance_main: Close
+[0m14:25:58.893042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fee41fa6-0314-4f70-9015-00b2fd6b3dc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ac92b0>]}
+[0m14:25:58.893285 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:25:58.893435 [debug] [MainThread]: On master: BEGIN
+[0m14:25:58.893572 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:25:58.893826 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:25:58.893976 [debug] [MainThread]: On master: COMMIT
+[0m14:25:58.894119 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:25:58.894256 [debug] [MainThread]: On master: COMMIT
+[0m14:25:58.894493 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:25:58.894709 [debug] [MainThread]: On master: Close
+[0m14:25:58.896315 [debug] [Thread-1 (]: Began running node model.insurance.dim_policy
+[0m14:25:58.896583 [info ] [Thread-1 (]: 1 of 1 START sql table model main.dim_policy ................................... [RUN]
+[0m14:25:58.896812 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_insurance_main, now model.insurance.dim_policy)
+[0m14:25:58.896995 [debug] [Thread-1 (]: Began compiling node model.insurance.dim_policy
+[0m14:25:58.901592 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.dim_policy"
+[0m14:25:58.902066 [debug] [Thread-1 (]: Began executing node model.insurance.dim_policy
+[0m14:25:58.919195 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.dim_policy"
+[0m14:25:58.919794 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m14:25:58.920003 [debug] [Thread-1 (]: On model.insurance.dim_policy: BEGIN
+[0m14:25:58.920179 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:25:58.920554 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:25:58.920723 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m14:25:58.920907 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."dim_policy__dbt_tmp"
+  
+    as (
+      select
+    policy_id,          -- the key other tables join to
+    policyholder,
+    state,
+    product_type,
+    premium_tier,
+    annual_premium,
+    status
+from "insurance"."main"."stg_policies"
+    );
+  
+  
+[0m14:25:58.925364 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m14:25:58.928695 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m14:25:58.928924 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+alter table "insurance"."main"."dim_policy__dbt_tmp" rename to "dim_policy"
+[0m14:25:58.929601 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:25:58.937246 [debug] [Thread-1 (]: On model.insurance.dim_policy: COMMIT
+[0m14:25:58.937475 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m14:25:58.937656 [debug] [Thread-1 (]: On model.insurance.dim_policy: COMMIT
+[0m14:25:58.938489 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:25:58.941262 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m14:25:58.941495 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+      drop table if exists "insurance"."main"."dim_policy__dbt_backup" cascade
+    
+[0m14:25:58.942036 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:25:58.943283 [debug] [Thread-1 (]: On model.insurance.dim_policy: Close
+[0m14:25:58.944353 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fee41fa6-0314-4f70-9015-00b2fd6b3dc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a029c0>]}
+[0m14:25:58.944766 [info ] [Thread-1 (]: 1 of 1 OK created sql table model main.dim_policy .............................. [[32mOK[0m in 0.05s]
+[0m14:25:58.945087 [debug] [Thread-1 (]: Finished running node model.insurance.dim_policy
+[0m14:25:58.945670 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:25:58.945838 [debug] [MainThread]: On master: BEGIN
+[0m14:25:58.945989 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:25:58.946302 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:25:58.946456 [debug] [MainThread]: On master: COMMIT
+[0m14:25:58.946601 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:25:58.946744 [debug] [MainThread]: On master: COMMIT
+[0m14:25:58.946982 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:25:58.947168 [debug] [MainThread]: On master: Close
+[0m14:25:58.947375 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:25:58.947525 [debug] [MainThread]: Connection 'model.insurance.dim_policy' was properly closed.
+[0m14:25:58.947679 [info ] [MainThread]: 
+[0m14:25:58.947846 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.15 seconds (0.15s).
+[0m14:25:58.948174 [debug] [MainThread]: Command end result
+[0m14:25:58.963436 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m14:25:58.964542 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m14:25:58.967470 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ankita/insurance-platform/transform/target/run_results.json
+[0m14:25:58.967672 [info ] [MainThread]: 
+[0m14:25:58.967898 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:25:58.968066 [info ] [MainThread]: 
+[0m14:25:58.968245 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:25:58.970078 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.77782965, "process_in_blocks": "0", "process_kernel_time": 0.222953, "process_mem_max_rss": "155713536", "process_out_blocks": "0", "process_user_time": 1.265671}
+[0m14:25:58.970369 [debug] [MainThread]: Command `dbt run` succeeded at 14:25:58.970319 after 0.78 seconds
+[0m14:25:58.970579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d2ed80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123f4b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111b4d580>]}
+[0m14:25:58.970781 [debug] [MainThread]: Flushing usage events
+[0m14:26:00.040337 [debug] [MainThread]: An error was encountered while trying to flush usage events
