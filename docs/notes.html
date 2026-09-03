@@ -189,7 +189,7 @@
   </div>
 
   <!-- LESSON 5 -->
-  <h2 class="lesson" id="l5">Lesson 5 — Dimensional Modeling <span class="pill wip">in progress</span></h2>
+  <h2 class="lesson" id="l5">Lesson 5 — Dimensional Modeling <span class="pill">done</span></h2>
   <p class="sub">Kimball star schema: organize data for analysis. A named JD requirement.</p>
   <div class="card">
     <h3>Facts vs Dimensions</h3>
@@ -211,6 +211,51 @@ dim_claim_type ─ FCT_CLAIMS ─ dim_policy
 models/marts/    dim_policy, dim_claim_type, dim_date, fct_claims</pre>
     <p>Marts built from staging via <code>ref()</code>. A generated dimension uses <code>SELECT DISTINCT</code> (e.g. dim_claim_type from the distinct claim types).</p>
     <div class="iv"><div class="lbl">Interview-ready summary</div><p>Dimensional modeling, from Kimball, organizes data into fact tables — measurable events like claims with their amounts — and dimension tables — descriptive context like policy, date, and claim type. Arranged as a star schema it makes analytical queries simple and consistent: join the fact to dimensions and aggregate. It's the standard structure for warehouse reporting and BI.</p></div>
+  </div>
+
+  <div class="card">
+    <h3>Building the star — step by step (what I built)</h3>
+    <table>
+      <tr><th>Model</th><th>Type</th><th>How</th></tr>
+      <tr><td>dim_policy</td><td>dimension (from source)</td><td>ref(stg_policies), descriptive attrs only, key = policy_id</td></tr>
+      <tr><td>dim_claim_type</td><td>dimension (generated)</td><td>SELECT DISTINCT claim_type from the claims</td></tr>
+      <tr><td>dim_date</td><td>dimension (generated)</td><td>DISTINCT dates + extract(year/month/quarter) + dayname()</td></tr>
+      <tr><td>fct_claims</td><td>FACT (centre)</td><td>one row per claim: metric (claim_amount) + foreign keys to the dims</td></tr>
+    </table>
+    <h4>Generated dimension (no source file)</h4>
+    <pre><span class="kw">select distinct</span> claim_type <span class="kw">from</span> {{ ref(<span class="str">'stg_claims'</span>) }}</pre>
+    <h4>Date dimension</h4>
+    <pre><span class="kw">select distinct</span> claim_date <span class="kw">as</span> date_day,
+    <span class="kw">extract</span>(year <span class="kw">from</span> claim_date) <span class="kw">as</span> year,
+    <span class="kw">extract</span>(quarter <span class="kw">from</span> claim_date) <span class="kw">as</span> quarter,
+    dayname(claim_date) <span class="kw">as</span> day_of_week
+<span class="kw">from</span> {{ ref(<span class="str">'stg_claims'</span>) }}</pre>
+    <div class="iv"><div class="lbl">Interview-ready · generated dimension</div><p>Not every dimension comes from a source table — some are generated from the fact's distinct values. I built dim_claim_type with SELECT DISTINCT over the claims, giving one row per claim type for the fact to join to.</p></div>
+    <div class="iv"><div class="lbl">Interview-ready · date dimension</div><p>A date dimension has one row per date with pre-computed attributes — year, month, quarter, day of week — so time-based analysis is a simple join and group-by instead of repeated date functions. A standard warehouse pattern built with extract() and dayname().</p></div>
+  </div>
+
+  <div class="card">
+    <h3>The fact table — <code>fct_claims</code></h3>
+    <p>A fact table has one row per event and holds two things: the <b>measures</b> (numbers to analyze) and the <b>foreign keys</b> (links to dimensions). Measures + keys to context.</p>
+    <pre><span class="kw">select</span> claim_id,                <span class="cmt">-- the grain: one row per claim</span>
+    policy_id, claim_type, claim_date,   <span class="cmt">-- foreign keys → dimensions</span>
+    claim_amount, severity_band, status  <span class="cmt">-- measures</span>
+<span class="kw">from</span> {{ ref(<span class="str">'stg_claims'</span>) }}</pre>
+    <h4>What makes this a fact table</h4>
+    <ul class="clean">
+      <li><b>One row per claim</b> — <code>claim_id</code> is the <b>grain</b> (the level of detail).</li>
+      <li>Carries the <b>foreign keys</b> (policy_id, claim_type, claim_date) that join out to the three dimensions.</li>
+      <li>Holds the <b>measure</b> (claim_amount) you'll sum/average.</li>
+    </ul>
+    <div class="tip"><b>"Grain" is an interview word</b> — it means what one row represents. Here the grain is "one claim." Stating the grain clearly is the first thing a good modeler does.</div>
+    <h4>The payoff — a star-schema query (fact + dimension)</h4>
+    <pre><span class="kw">SELECT</span> p.product_type, <span class="kw">count</span>(*) <span class="kw">AS</span> num_claims,
+       <span class="kw">round</span>(<span class="kw">sum</span>(f.claim_amount),0) <span class="kw">AS</span> total_claimed
+<span class="kw">FROM</span> fct_claims f
+<span class="kw">JOIN</span> dim_policy p <span class="kw">ON</span> f.policy_id = p.policy_id
+<span class="kw">GROUP BY</span> p.product_type <span class="kw">ORDER BY</span> total_claimed <span class="kw">DESC</span></pre>
+    <p>Every business question is the same move: join fact to dimension(s) → group by dimension attributes → aggregate the measure.</p>
+    <div class="iv"><div class="lbl">Interview-ready · fact table</div><p>fct_claims is my fact table at claim grain — one row per claim, holding the claim_amount measure and foreign keys to dim_policy, dim_claim_type, and dim_date. Analytical questions become a join from the fact to the relevant dimensions with a group-by and aggregate — for example, total claim amount by product type joins fct_claims to dim_policy.</p></div>
   </div>
 
   <!-- SQL TOOLBOX -->
