@@ -3202,3 +3202,1625 @@ alter table "insurance"."main"."dim_policy__dbt_tmp" rename to "dim_policy"
 [0m14:49:14.457437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075a49b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070e1f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110690230>]}
 [0m14:49:14.457627 [debug] [MainThread]: Flushing usage events
 [0m14:49:15.962153 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:06:17.995319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bf5ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bfa600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bfa300>]}
+
+
+============================== 16:06:17.998392 | f2c821f5-63ec-439b-9b20-8ecdd694d366 ==============================
+[0m16:06:17.998392 [info ] [MainThread]: Running with dbt=1.11.11
+[0m16:06:17.998752 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'log_cache_events': 'False', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '.', 'introspect': 'True', 'quiet': 'False', 'warn_error': 'None', 'log_path': '/Users/ankita/insurance-platform/transform/logs', 'invocation_command': 'dbt run --profiles-dir .', 'write_json': 'True', 'target_path': 'None', 'no_print': 'None', 'fail_fast': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'static_parser': 'True', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m16:06:18.209552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110ba7b0>]}
+[0m16:06:18.240378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bf85c0>]}
+[0m16:06:18.241926 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:06:18.305278 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m16:06:18.374396 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:06:18.374691 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:06:18.374864 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:06:18.394733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111c39e0>]}
+[0m16:06:18.435392 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m16:06:18.437280 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m16:06:18.445195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111375b20>]}
+[0m16:06:18.445487 [info ] [MainThread]: Found 6 models, 7 data tests, 485 macros
+[0m16:06:18.445690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072cb710>]}
+[0m16:06:18.446729 [info ] [MainThread]: 
+[0m16:06:18.446928 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:06:18.447094 [info ] [MainThread]: 
+[0m16:06:18.447358 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:06:18.449781 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_insurance'
+[0m16:06:18.491253 [debug] [ThreadPool]: Using duckdb connection "list_insurance"
+[0m16:06:18.491545 [debug] [ThreadPool]: On list_insurance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "list_insurance"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"insurance"'
+    
+  
+  
+[0m16:06:18.491724 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:06:18.514693 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m16:06:18.515884 [debug] [ThreadPool]: On list_insurance: Close
+[0m16:06:18.516275 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_insurance, now create_insurance_main)
+[0m16:06:18.516522 [debug] [ThreadPool]: Creating schema "database: "insurance"
+schema: "main"
+"
+[0m16:06:18.519974 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m16:06:18.520175 [debug] [ThreadPool]: On create_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "create_insurance_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='insurance'
+        and type='sqlite'
+    
+  
+[0m16:06:18.520340 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:06:18.521335 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:06:18.522048 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m16:06:18.522220 [debug] [ThreadPool]: On create_insurance_main: BEGIN
+[0m16:06:18.522461 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:06:18.522617 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m16:06:18.522763 [debug] [ThreadPool]: On create_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "create_insurance_main"} */
+
+    
+    
+        create schema if not exists "insurance"."main"
+    
+[0m16:06:18.523087 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:06:18.523603 [debug] [ThreadPool]: On create_insurance_main: COMMIT
+[0m16:06:18.523786 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m16:06:18.523941 [debug] [ThreadPool]: On create_insurance_main: COMMIT
+[0m16:06:18.524173 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:06:18.524331 [debug] [ThreadPool]: On create_insurance_main: Close
+[0m16:06:18.525002 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_insurance_main, now list_insurance_main)
+[0m16:06:18.527732 [debug] [ThreadPool]: Using duckdb connection "list_insurance_main"
+[0m16:06:18.527920 [debug] [ThreadPool]: On list_insurance_main: BEGIN
+[0m16:06:18.528069 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:06:18.528332 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:06:18.528483 [debug] [ThreadPool]: Using duckdb connection "list_insurance_main"
+[0m16:06:18.528638 [debug] [ThreadPool]: On list_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "list_insurance_main"} */
+select
+      'insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'insurance'
+  
+[0m16:06:18.531474 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m16:06:18.532393 [debug] [ThreadPool]: On list_insurance_main: ROLLBACK
+[0m16:06:18.534273 [debug] [ThreadPool]: Failed to rollback 'list_insurance_main'
+[0m16:06:18.534474 [debug] [ThreadPool]: On list_insurance_main: Close
+[0m16:06:18.535469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104da71d0>]}
+[0m16:06:18.535735 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:06:18.535893 [debug] [MainThread]: On master: BEGIN
+[0m16:06:18.536035 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:06:18.536318 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:06:18.536471 [debug] [MainThread]: On master: COMMIT
+[0m16:06:18.536616 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:06:18.536752 [debug] [MainThread]: On master: COMMIT
+[0m16:06:18.536956 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:06:18.537104 [debug] [MainThread]: On master: Close
+[0m16:06:18.538509 [debug] [Thread-1 (]: Began running node model.insurance.stg_claims
+[0m16:06:18.538778 [info ] [Thread-1 (]: 1 of 6 START sql table model main.stg_claims ................................... [RUN]
+[0m16:06:18.539003 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_insurance_main, now model.insurance.stg_claims)
+[0m16:06:18.539187 [debug] [Thread-1 (]: Began compiling node model.insurance.stg_claims
+[0m16:06:18.542504 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.stg_claims"
+[0m16:06:18.542895 [debug] [Thread-1 (]: Began executing node model.insurance.stg_claims
+[0m16:06:18.559112 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.stg_claims"
+[0m16:06:18.560127 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:06:18.560333 [debug] [Thread-1 (]: On model.insurance.stg_claims: BEGIN
+[0m16:06:18.560500 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:06:18.560884 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.561057 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:06:18.561236 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."stg_claims__dbt_tmp"
+  
+    as (
+      select
+      claim_id,
+      policy_id,
+      claim_date,
+      claim_type,
+      claim_amount,
+      status, 
+      state,
+
+      case
+          when claim_amount < 1000  then 'small'
+          when claim_amount < 10000 then 'medium'
+          when claim_amount < 30000 then 'large'
+          else 'catastrophic'
+      end as severity_band,
+  
+      loaded_at
+
+  from raw_claims
+    );
+  
+  
+[0m16:06:18.566364 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m16:06:18.569395 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:06:18.569634 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_claims'
+  
+[0m16:06:18.570156 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.570833 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:06:18.571025 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_claims'
+  
+[0m16:06:18.572180 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:06:18.575684 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:06:18.575901 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+alter table "insurance"."main"."stg_claims" rename to "stg_claims__dbt_backup"
+[0m16:06:18.576721 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:06:18.578150 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:06:18.578344 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+alter table "insurance"."main"."stg_claims__dbt_tmp" rename to "stg_claims"
+[0m16:06:18.578636 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.587153 [debug] [Thread-1 (]: On model.insurance.stg_claims: COMMIT
+[0m16:06:18.587399 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:06:18.587578 [debug] [Thread-1 (]: On model.insurance.stg_claims: COMMIT
+[0m16:06:18.588531 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:06:18.591390 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:06:18.591629 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+
+      drop table if exists "insurance"."main"."stg_claims__dbt_backup" cascade
+    
+[0m16:06:18.592128 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.593352 [debug] [Thread-1 (]: On model.insurance.stg_claims: Close
+[0m16:06:18.594377 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cce900>]}
+[0m16:06:18.594713 [info ] [Thread-1 (]: 1 of 6 OK created sql table model main.stg_claims .............................. [[32mOK[0m in 0.05s]
+[0m16:06:18.595009 [debug] [Thread-1 (]: Finished running node model.insurance.stg_claims
+[0m16:06:18.595224 [debug] [Thread-1 (]: Began running node model.insurance.stg_policies
+[0m16:06:18.595530 [info ] [Thread-1 (]: 2 of 6 START sql table model main.stg_policies ................................. [RUN]
+[0m16:06:18.595753 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.stg_claims, now model.insurance.stg_policies)
+[0m16:06:18.595940 [debug] [Thread-1 (]: Began compiling node model.insurance.stg_policies
+[0m16:06:18.596924 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.stg_policies"
+[0m16:06:18.597503 [debug] [Thread-1 (]: Began executing node model.insurance.stg_policies
+[0m16:06:18.599106 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.stg_policies"
+[0m16:06:18.599449 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:06:18.599636 [debug] [Thread-1 (]: On model.insurance.stg_policies: BEGIN
+[0m16:06:18.599812 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:06:18.600154 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.600424 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:06:18.600652 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."stg_policies__dbt_tmp"
+  
+    as (
+      select
+    policy_id,
+    policyholder,
+    state,
+    product_type,
+    annual_premium,
+    start_date,
+    status,
+
+    case
+        when annual_premium < 1000 then 'budget'
+        when annual_premium < 2500 then 'standard'
+        else 'premium'
+    end as premium_tier,
+
+    loaded_at
+from raw_policies
+    );
+  
+  
+[0m16:06:18.602026 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:06:18.602603 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:06:18.602783 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_policies'
+  
+[0m16:06:18.603191 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.603807 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:06:18.603989 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_policies'
+  
+[0m16:06:18.604376 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.606794 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:06:18.607005 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+alter table "insurance"."main"."stg_policies" rename to "stg_policies__dbt_backup"
+[0m16:06:18.607333 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.641302 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:06:18.641596 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+alter table "insurance"."main"."stg_policies__dbt_tmp" rename to "stg_policies"
+[0m16:06:18.642033 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.642964 [debug] [Thread-1 (]: On model.insurance.stg_policies: COMMIT
+[0m16:06:18.643161 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:06:18.643333 [debug] [Thread-1 (]: On model.insurance.stg_policies: COMMIT
+[0m16:06:18.643891 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.645008 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:06:18.645204 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+
+      drop table if exists "insurance"."main"."stg_policies__dbt_backup" cascade
+    
+[0m16:06:18.645649 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.646423 [debug] [Thread-1 (]: On model.insurance.stg_policies: Close
+[0m16:06:18.646728 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111b49b50>]}
+[0m16:06:18.647057 [info ] [Thread-1 (]: 2 of 6 OK created sql table model main.stg_policies ............................ [[32mOK[0m in 0.05s]
+[0m16:06:18.647342 [debug] [Thread-1 (]: Finished running node model.insurance.stg_policies
+[0m16:06:18.647547 [debug] [Thread-1 (]: Began running node model.insurance.dim_claim_type
+[0m16:06:18.647846 [info ] [Thread-1 (]: 3 of 6 START sql table model main.dim_claim_type ............................... [RUN]
+[0m16:06:18.648069 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.stg_policies, now model.insurance.dim_claim_type)
+[0m16:06:18.648255 [debug] [Thread-1 (]: Began compiling node model.insurance.dim_claim_type
+[0m16:06:18.649674 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.dim_claim_type"
+[0m16:06:18.650302 [debug] [Thread-1 (]: Began executing node model.insurance.dim_claim_type
+[0m16:06:18.651896 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.dim_claim_type"
+[0m16:06:18.652264 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:06:18.652476 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: BEGIN
+[0m16:06:18.652697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:06:18.653057 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.653237 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:06:18.653415 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."dim_claim_type__dbt_tmp"
+  
+    as (
+      select distinct
+    claim_type
+from "insurance"."main"."stg_claims"
+order by claim_type
+    );
+  
+  
+[0m16:06:18.657039 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:06:18.657696 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:06:18.657953 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_claim_type'
+  
+[0m16:06:18.658445 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.659304 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:06:18.659556 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_claim_type'
+  
+[0m16:06:18.660157 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.662004 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:06:18.662223 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+alter table "insurance"."main"."dim_claim_type" rename to "dim_claim_type__dbt_backup"
+[0m16:06:18.662591 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.664015 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:06:18.664225 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+alter table "insurance"."main"."dim_claim_type__dbt_tmp" rename to "dim_claim_type"
+[0m16:06:18.664611 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.665510 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: COMMIT
+[0m16:06:18.665697 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:06:18.665868 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: COMMIT
+[0m16:06:18.666303 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.667459 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:06:18.667645 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+
+      drop table if exists "insurance"."main"."dim_claim_type__dbt_backup" cascade
+    
+[0m16:06:18.668032 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.668698 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: Close
+[0m16:06:18.668992 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104dca0c0>]}
+[0m16:06:18.669325 [info ] [Thread-1 (]: 3 of 6 OK created sql table model main.dim_claim_type .......................... [[32mOK[0m in 0.02s]
+[0m16:06:18.669606 [debug] [Thread-1 (]: Finished running node model.insurance.dim_claim_type
+[0m16:06:18.669803 [debug] [Thread-1 (]: Began running node model.insurance.dim_date
+[0m16:06:18.670051 [info ] [Thread-1 (]: 4 of 6 START sql table model main.dim_date ..................................... [RUN]
+[0m16:06:18.670260 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.dim_claim_type, now model.insurance.dim_date)
+[0m16:06:18.670437 [debug] [Thread-1 (]: Began compiling node model.insurance.dim_date
+[0m16:06:18.671814 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.dim_date"
+[0m16:06:18.672188 [debug] [Thread-1 (]: Began executing node model.insurance.dim_date
+[0m16:06:18.673714 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.dim_date"
+[0m16:06:18.674055 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:06:18.674232 [debug] [Thread-1 (]: On model.insurance.dim_date: BEGIN
+[0m16:06:18.674396 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:06:18.674755 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.674958 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:06:18.675155 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."dim_date__dbt_tmp"
+  
+    as (
+      select distinct
+    claim_date                          as date_day,
+    extract(year    from claim_date)    as year,
+    extract(month   from claim_date)    as month,
+    extract(quarter from claim_date)    as quarter,
+    dayname(claim_date)                 as day_of_week
+from "insurance"."main"."stg_claims"
+order by date_day
+    );
+  
+  
+[0m16:06:18.678404 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:06:18.679190 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:06:18.679399 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_date'
+  
+[0m16:06:18.679841 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.680493 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:06:18.680680 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_date'
+  
+[0m16:06:18.681138 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.684054 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:06:18.684321 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+alter table "insurance"."main"."dim_date" rename to "dim_date__dbt_backup"
+[0m16:06:18.684750 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.686211 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:06:18.686404 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+alter table "insurance"."main"."dim_date__dbt_tmp" rename to "dim_date"
+[0m16:06:18.686705 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.687555 [debug] [Thread-1 (]: On model.insurance.dim_date: COMMIT
+[0m16:06:18.687733 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:06:18.687901 [debug] [Thread-1 (]: On model.insurance.dim_date: COMMIT
+[0m16:06:18.688319 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.689497 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:06:18.689692 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+
+      drop table if exists "insurance"."main"."dim_date__dbt_backup" cascade
+    
+[0m16:06:18.690102 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.690759 [debug] [Thread-1 (]: On model.insurance.dim_date: Close
+[0m16:06:18.691044 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111b264e0>]}
+[0m16:06:18.691374 [info ] [Thread-1 (]: 4 of 6 OK created sql table model main.dim_date ................................ [[32mOK[0m in 0.02s]
+[0m16:06:18.691659 [debug] [Thread-1 (]: Finished running node model.insurance.dim_date
+[0m16:06:18.691863 [debug] [Thread-1 (]: Began running node model.insurance.fct_claims
+[0m16:06:18.692131 [info ] [Thread-1 (]: 5 of 6 START sql table model main.fct_claims ................................... [RUN]
+[0m16:06:18.692364 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.dim_date, now model.insurance.fct_claims)
+[0m16:06:18.692556 [debug] [Thread-1 (]: Began compiling node model.insurance.fct_claims
+[0m16:06:18.693914 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.fct_claims"
+[0m16:06:18.694627 [debug] [Thread-1 (]: Began executing node model.insurance.fct_claims
+[0m16:06:18.696188 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.fct_claims"
+[0m16:06:18.696520 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:06:18.696701 [debug] [Thread-1 (]: On model.insurance.fct_claims: BEGIN
+[0m16:06:18.696868 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:06:18.697180 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.697352 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:06:18.697536 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."fct_claims__dbt_tmp"
+  
+    as (
+      select
+    claim_id,                       -- the fact's own key (one row per claim)
+
+    -- foreign keys -> dimensions
+    policy_id,                      -- joins to dim_policy
+    claim_type,                     -- joins to dim_claim_type
+    claim_date,                     -- joins to dim_date
+
+    -- measures (the numbers we analyze)
+    claim_amount,
+    severity_band,
+
+    status
+from "insurance"."main"."stg_claims"
+    );
+  
+  
+[0m16:06:18.698499 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:06:18.699149 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:06:18.699433 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_claims'
+  
+[0m16:06:18.699887 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.700515 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:06:18.700701 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_claims'
+  
+[0m16:06:18.701125 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.702863 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:06:18.703080 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+alter table "insurance"."main"."fct_claims" rename to "fct_claims__dbt_backup"
+[0m16:06:18.703440 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.704894 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:06:18.705086 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+alter table "insurance"."main"."fct_claims__dbt_tmp" rename to "fct_claims"
+[0m16:06:18.705385 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.706246 [debug] [Thread-1 (]: On model.insurance.fct_claims: COMMIT
+[0m16:06:18.706432 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:06:18.706595 [debug] [Thread-1 (]: On model.insurance.fct_claims: COMMIT
+[0m16:06:18.707093 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.708222 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:06:18.708413 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+
+      drop table if exists "insurance"."main"."fct_claims__dbt_backup" cascade
+    
+[0m16:06:18.708814 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.709461 [debug] [Thread-1 (]: On model.insurance.fct_claims: Close
+[0m16:06:18.709741 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11183a000>]}
+[0m16:06:18.710053 [info ] [Thread-1 (]: 5 of 6 OK created sql table model main.fct_claims .............................. [[32mOK[0m in 0.02s]
+[0m16:06:18.710333 [debug] [Thread-1 (]: Finished running node model.insurance.fct_claims
+[0m16:06:18.710541 [debug] [Thread-1 (]: Began running node model.insurance.dim_policy
+[0m16:06:18.710761 [info ] [Thread-1 (]: 6 of 6 START sql table model main.dim_policy ................................... [RUN]
+[0m16:06:18.711027 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.fct_claims, now model.insurance.dim_policy)
+[0m16:06:18.711232 [debug] [Thread-1 (]: Began compiling node model.insurance.dim_policy
+[0m16:06:18.712579 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.dim_policy"
+[0m16:06:18.712938 [debug] [Thread-1 (]: Began executing node model.insurance.dim_policy
+[0m16:06:18.714499 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.dim_policy"
+[0m16:06:18.714972 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:06:18.715175 [debug] [Thread-1 (]: On model.insurance.dim_policy: BEGIN
+[0m16:06:18.715357 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:06:18.715842 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.716062 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:06:18.716250 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."dim_policy__dbt_tmp"
+  
+    as (
+      select
+    policy_id,          -- the key other tables join to
+    policyholder,
+    state,
+    product_type,
+    premium_tier,
+    annual_premium,
+    status
+from "insurance"."main"."stg_policies"
+    );
+  
+  
+[0m16:06:18.717026 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:06:18.717713 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:06:18.717916 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_policy'
+  
+[0m16:06:18.718349 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.718988 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:06:18.719174 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_policy'
+  
+[0m16:06:18.719587 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.722250 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:06:18.722478 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+alter table "insurance"."main"."dim_policy" rename to "dim_policy__dbt_backup"
+[0m16:06:18.722818 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.724282 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:06:18.724485 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+alter table "insurance"."main"."dim_policy__dbt_tmp" rename to "dim_policy"
+[0m16:06:18.724840 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.725756 [debug] [Thread-1 (]: On model.insurance.dim_policy: COMMIT
+[0m16:06:18.725944 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:06:18.726112 [debug] [Thread-1 (]: On model.insurance.dim_policy: COMMIT
+[0m16:06:18.726568 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.727704 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:06:18.727890 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+      drop table if exists "insurance"."main"."dim_policy__dbt_backup" cascade
+    
+[0m16:06:18.728299 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:06:18.728936 [debug] [Thread-1 (]: On model.insurance.dim_policy: Close
+[0m16:06:18.729207 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f2c821f5-63ec-439b-9b20-8ecdd694d366', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ba33e0>]}
+[0m16:06:18.729514 [info ] [Thread-1 (]: 6 of 6 OK created sql table model main.dim_policy .............................. [[32mOK[0m in 0.02s]
+[0m16:06:18.729788 [debug] [Thread-1 (]: Finished running node model.insurance.dim_policy
+[0m16:06:18.730412 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:06:18.730604 [debug] [MainThread]: On master: BEGIN
+[0m16:06:18.730759 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:06:18.731078 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:06:18.731239 [debug] [MainThread]: On master: COMMIT
+[0m16:06:18.731391 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:06:18.731540 [debug] [MainThread]: On master: COMMIT
+[0m16:06:18.731873 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:06:18.732062 [debug] [MainThread]: On master: Close
+[0m16:06:18.732304 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:06:18.732459 [debug] [MainThread]: Connection 'model.insurance.dim_policy' was properly closed.
+[0m16:06:18.732664 [info ] [MainThread]: 
+[0m16:06:18.732845 [info ] [MainThread]: Finished running 6 table models in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m16:06:18.733450 [debug] [MainThread]: Command end result
+[0m16:06:18.748676 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m16:06:18.749968 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m16:06:18.753044 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ankita/insurance-platform/transform/target/run_results.json
+[0m16:06:18.753251 [info ] [MainThread]: 
+[0m16:06:18.753455 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:06:18.753616 [info ] [MainThread]: 
+[0m16:06:18.753791 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m16:06:18.755586 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.8031627, "process_in_blocks": "0", "process_kernel_time": 0.245707, "process_mem_max_rss": "157270016", "process_out_blocks": "0", "process_user_time": 1.27536}
+[0m16:06:18.755834 [debug] [MainThread]: Command `dbt run` succeeded at 16:06:18.755793 after 0.80 seconds
+[0m16:06:18.756028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11142c1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11142e3f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11142ea20>]}
+[0m16:06:18.756217 [debug] [MainThread]: Flushing usage events
+[0m16:06:20.242445 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:08:42.485757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044d8fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cde630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cde330>]}
+
+
+============================== 16:08:42.488852 | fb658f5c-fa71-4aba-a64a-e4e7ced99a55 ==============================
+[0m16:08:42.488852 [info ] [MainThread]: Running with dbt=1.11.11
+[0m16:08:42.489255 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'write_json': 'True', 'log_path': '/Users/ankita/insurance-platform/transform/logs', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'version_check': 'True', 'use_colors': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'debug': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'partial_parse': 'True', 'empty': 'False', 'profiles_dir': '.', 'target_path': 'None', 'no_print': 'None'}
+[0m16:08:42.699921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102277800>]}
+[0m16:08:42.731763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10234f1a0>]}
+[0m16:08:42.733334 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:08:42.799972 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m16:08:42.868446 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:08:42.868722 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:08:42.868881 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:08:42.888458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104faed20>]}
+[0m16:08:42.929118 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m16:08:42.930598 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m16:08:42.937702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051598e0>]}
+[0m16:08:42.937982 [info ] [MainThread]: Found 6 models, 7 data tests, 485 macros
+[0m16:08:42.938179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053268d0>]}
+[0m16:08:42.939209 [info ] [MainThread]: 
+[0m16:08:42.939403 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:08:42.939559 [info ] [MainThread]: 
+[0m16:08:42.939818 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:08:42.942328 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_insurance'
+[0m16:08:42.977142 [debug] [ThreadPool]: Using duckdb connection "list_insurance"
+[0m16:08:42.977419 [debug] [ThreadPool]: On list_insurance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "list_insurance"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"insurance"'
+    
+  
+  
+[0m16:08:42.977602 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:08:42.998250 [debug] [ThreadPool]: SQL status: OK in 0.021 seconds
+[0m16:08:42.999410 [debug] [ThreadPool]: On list_insurance: Close
+[0m16:08:42.999814 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_insurance, now create_insurance_main)
+[0m16:08:43.000083 [debug] [ThreadPool]: Creating schema "database: "insurance"
+schema: "main"
+"
+[0m16:08:43.003617 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m16:08:43.003829 [debug] [ThreadPool]: On create_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "create_insurance_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='insurance'
+        and type='sqlite'
+    
+  
+[0m16:08:43.003993 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:08:43.004770 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:08:43.005526 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m16:08:43.005719 [debug] [ThreadPool]: On create_insurance_main: BEGIN
+[0m16:08:43.005978 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:08:43.006135 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m16:08:43.006286 [debug] [ThreadPool]: On create_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "create_insurance_main"} */
+
+    
+    
+        create schema if not exists "insurance"."main"
+    
+[0m16:08:43.006559 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:08:43.006995 [debug] [ThreadPool]: On create_insurance_main: COMMIT
+[0m16:08:43.007165 [debug] [ThreadPool]: Using duckdb connection "create_insurance_main"
+[0m16:08:43.007318 [debug] [ThreadPool]: On create_insurance_main: COMMIT
+[0m16:08:43.007551 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:08:43.007714 [debug] [ThreadPool]: On create_insurance_main: Close
+[0m16:08:43.008496 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_insurance_main, now list_insurance_main)
+[0m16:08:43.011524 [debug] [ThreadPool]: Using duckdb connection "list_insurance_main"
+[0m16:08:43.011731 [debug] [ThreadPool]: On list_insurance_main: BEGIN
+[0m16:08:43.011886 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:08:43.012196 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:08:43.012351 [debug] [ThreadPool]: Using duckdb connection "list_insurance_main"
+[0m16:08:43.012509 [debug] [ThreadPool]: On list_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "list_insurance_main"} */
+select
+      'insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'insurance'
+  
+[0m16:08:43.015724 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m16:08:43.016501 [debug] [ThreadPool]: On list_insurance_main: ROLLBACK
+[0m16:08:43.018366 [debug] [ThreadPool]: Failed to rollback 'list_insurance_main'
+[0m16:08:43.018576 [debug] [ThreadPool]: On list_insurance_main: Close
+[0m16:08:43.019579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102ba10d0>]}
+[0m16:08:43.019837 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:08:43.019992 [debug] [MainThread]: On master: BEGIN
+[0m16:08:43.020136 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:08:43.020437 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:08:43.020618 [debug] [MainThread]: On master: COMMIT
+[0m16:08:43.020777 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:08:43.020927 [debug] [MainThread]: On master: COMMIT
+[0m16:08:43.021165 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:08:43.021323 [debug] [MainThread]: On master: Close
+[0m16:08:43.022563 [debug] [Thread-1 (]: Began running node model.insurance.stg_claims
+[0m16:08:43.022842 [info ] [Thread-1 (]: 1 of 6 START sql table model main.stg_claims ................................... [RUN]
+[0m16:08:43.023072 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_insurance_main, now model.insurance.stg_claims)
+[0m16:08:43.023257 [debug] [Thread-1 (]: Began compiling node model.insurance.stg_claims
+[0m16:08:43.026488 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.stg_claims"
+[0m16:08:43.026867 [debug] [Thread-1 (]: Began executing node model.insurance.stg_claims
+[0m16:08:43.045017 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.stg_claims"
+[0m16:08:43.045671 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:08:43.045870 [debug] [Thread-1 (]: On model.insurance.stg_claims: BEGIN
+[0m16:08:43.046045 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:43.046433 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.046608 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:08:43.046784 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."stg_claims__dbt_tmp"
+  
+    as (
+      select
+      claim_id,
+      policy_id,
+      claim_date,
+      claim_type,
+      claim_amount,
+      status, 
+      state,
+
+      case
+          when claim_amount < 1000  then 'small'
+          when claim_amount < 10000 then 'medium'
+          when claim_amount < 30000 then 'large'
+          else 'catastrophic'
+      end as severity_band,
+  
+      loaded_at
+
+  from raw_claims
+    );
+  
+  
+[0m16:08:43.051697 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m16:08:43.054564 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:08:43.054790 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_claims'
+  
+[0m16:08:43.055247 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.055914 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:08:43.056116 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_claims'
+  
+[0m16:08:43.056923 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:43.060328 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:08:43.060572 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+alter table "insurance"."main"."stg_claims" rename to "stg_claims__dbt_backup"
+[0m16:08:43.061539 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:43.062965 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:08:43.063161 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+alter table "insurance"."main"."stg_claims__dbt_tmp" rename to "stg_claims"
+[0m16:08:43.063460 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.071954 [debug] [Thread-1 (]: On model.insurance.stg_claims: COMMIT
+[0m16:08:43.072194 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:08:43.072381 [debug] [Thread-1 (]: On model.insurance.stg_claims: COMMIT
+[0m16:08:43.073263 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:43.076196 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_claims"
+[0m16:08:43.076448 [debug] [Thread-1 (]: On model.insurance.stg_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_claims"} */
+
+      drop table if exists "insurance"."main"."stg_claims__dbt_backup" cascade
+    
+[0m16:08:43.077198 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:43.078454 [debug] [Thread-1 (]: On model.insurance.stg_claims: Close
+[0m16:08:43.079462 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102276ab0>]}
+[0m16:08:43.079835 [info ] [Thread-1 (]: 1 of 6 OK created sql table model main.stg_claims .............................. [[32mOK[0m in 0.06s]
+[0m16:08:43.080138 [debug] [Thread-1 (]: Finished running node model.insurance.stg_claims
+[0m16:08:43.080353 [debug] [Thread-1 (]: Began running node model.insurance.stg_policies
+[0m16:08:43.080667 [info ] [Thread-1 (]: 2 of 6 START sql table model main.stg_policies ................................. [RUN]
+[0m16:08:43.080896 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.stg_claims, now model.insurance.stg_policies)
+[0m16:08:43.081083 [debug] [Thread-1 (]: Began compiling node model.insurance.stg_policies
+[0m16:08:43.082085 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.stg_policies"
+[0m16:08:43.082430 [debug] [Thread-1 (]: Began executing node model.insurance.stg_policies
+[0m16:08:43.084005 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.stg_policies"
+[0m16:08:43.084332 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:08:43.084505 [debug] [Thread-1 (]: On model.insurance.stg_policies: BEGIN
+[0m16:08:43.084667 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:43.085014 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.085185 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:08:43.085367 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."stg_policies__dbt_tmp"
+  
+    as (
+      select
+    policy_id,
+    policyholder,
+    state,
+    product_type,
+    annual_premium,
+    start_date,
+    status,
+
+    case
+        when annual_premium < 1000 then 'budget'
+        when annual_premium < 2500 then 'standard'
+        else 'premium'
+    end as premium_tier,
+
+    loaded_at
+from raw_policies
+    );
+  
+  
+[0m16:08:43.086500 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:43.087098 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:08:43.087284 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_policies'
+  
+[0m16:08:43.087675 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.088289 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:08:43.088475 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_policies'
+  
+[0m16:08:43.088885 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.091415 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:08:43.091654 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+alter table "insurance"."main"."stg_policies" rename to "stg_policies__dbt_backup"
+[0m16:08:43.092222 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.126142 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:08:43.126430 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+alter table "insurance"."main"."stg_policies__dbt_tmp" rename to "stg_policies"
+[0m16:08:43.126848 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.127757 [debug] [Thread-1 (]: On model.insurance.stg_policies: COMMIT
+[0m16:08:43.127942 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:08:43.128111 [debug] [Thread-1 (]: On model.insurance.stg_policies: COMMIT
+[0m16:08:43.128659 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.129881 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.stg_policies"
+[0m16:08:43.130087 [debug] [Thread-1 (]: On model.insurance.stg_policies: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.stg_policies"} */
+
+      drop table if exists "insurance"."main"."stg_policies__dbt_backup" cascade
+    
+[0m16:08:43.130525 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.131247 [debug] [Thread-1 (]: On model.insurance.stg_policies: Close
+[0m16:08:43.131549 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105731b50>]}
+[0m16:08:43.131867 [info ] [Thread-1 (]: 2 of 6 OK created sql table model main.stg_policies ............................ [[32mOK[0m in 0.05s]
+[0m16:08:43.132150 [debug] [Thread-1 (]: Finished running node model.insurance.stg_policies
+[0m16:08:43.132355 [debug] [Thread-1 (]: Began running node model.insurance.dim_claim_type
+[0m16:08:43.132692 [info ] [Thread-1 (]: 3 of 6 START sql table model main.dim_claim_type ............................... [RUN]
+[0m16:08:43.132940 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.stg_policies, now model.insurance.dim_claim_type)
+[0m16:08:43.133131 [debug] [Thread-1 (]: Began compiling node model.insurance.dim_claim_type
+[0m16:08:43.134571 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.dim_claim_type"
+[0m16:08:43.135203 [debug] [Thread-1 (]: Began executing node model.insurance.dim_claim_type
+[0m16:08:43.136769 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.dim_claim_type"
+[0m16:08:43.137205 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:08:43.137416 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: BEGIN
+[0m16:08:43.137595 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:43.137989 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.138215 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:08:43.138420 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."dim_claim_type__dbt_tmp"
+  
+    as (
+      select distinct
+    claim_type
+from "insurance"."main"."stg_claims"
+order by claim_type
+    );
+  
+  
+[0m16:08:43.142899 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m16:08:43.143717 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:08:43.143957 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_claim_type'
+  
+[0m16:08:43.144503 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.145182 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:08:43.145383 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_claim_type'
+  
+[0m16:08:43.145837 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.147692 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:08:43.147950 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+alter table "insurance"."main"."dim_claim_type" rename to "dim_claim_type__dbt_backup"
+[0m16:08:43.148431 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.150229 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:08:43.150467 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+alter table "insurance"."main"."dim_claim_type__dbt_tmp" rename to "dim_claim_type"
+[0m16:08:43.150898 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.151807 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: COMMIT
+[0m16:08:43.152012 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:08:43.152187 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: COMMIT
+[0m16:08:43.152648 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.153876 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_claim_type"
+[0m16:08:43.154079 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_claim_type"} */
+
+      drop table if exists "insurance"."main"."dim_claim_type__dbt_backup" cascade
+    
+[0m16:08:43.154487 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.155149 [debug] [Thread-1 (]: On model.insurance.dim_claim_type: Close
+[0m16:08:43.155424 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104de71d0>]}
+[0m16:08:43.155744 [info ] [Thread-1 (]: 3 of 6 OK created sql table model main.dim_claim_type .......................... [[32mOK[0m in 0.02s]
+[0m16:08:43.156021 [debug] [Thread-1 (]: Finished running node model.insurance.dim_claim_type
+[0m16:08:43.156227 [debug] [Thread-1 (]: Began running node model.insurance.dim_date
+[0m16:08:43.156521 [info ] [Thread-1 (]: 4 of 6 START sql table model main.dim_date ..................................... [RUN]
+[0m16:08:43.156795 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.dim_claim_type, now model.insurance.dim_date)
+[0m16:08:43.157008 [debug] [Thread-1 (]: Began compiling node model.insurance.dim_date
+[0m16:08:43.158713 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.dim_date"
+[0m16:08:43.159186 [debug] [Thread-1 (]: Began executing node model.insurance.dim_date
+[0m16:08:43.160812 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.dim_date"
+[0m16:08:43.161188 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:08:43.161402 [debug] [Thread-1 (]: On model.insurance.dim_date: BEGIN
+[0m16:08:43.161592 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:43.161984 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.162166 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:08:43.162350 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."dim_date__dbt_tmp"
+  
+    as (
+      select distinct
+    claim_date                          as date_day,
+    extract(year    from claim_date)    as year,
+    extract(month   from claim_date)    as month,
+    extract(quarter from claim_date)    as quarter,
+    dayname(claim_date)                 as day_of_week
+from "insurance"."main"."stg_claims"
+order by date_day
+    );
+  
+  
+[0m16:08:43.166096 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m16:08:43.166825 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:08:43.167013 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_date'
+  
+[0m16:08:43.167437 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.168087 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:08:43.168277 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_date'
+  
+[0m16:08:43.168707 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.171277 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:08:43.171486 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+alter table "insurance"."main"."dim_date" rename to "dim_date__dbt_backup"
+[0m16:08:43.171826 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.173205 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:08:43.173400 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+alter table "insurance"."main"."dim_date__dbt_tmp" rename to "dim_date"
+[0m16:08:43.173685 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.174604 [debug] [Thread-1 (]: On model.insurance.dim_date: COMMIT
+[0m16:08:43.174823 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:08:43.175012 [debug] [Thread-1 (]: On model.insurance.dim_date: COMMIT
+[0m16:08:43.175656 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.176991 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_date"
+[0m16:08:43.177186 [debug] [Thread-1 (]: On model.insurance.dim_date: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_date"} */
+
+      drop table if exists "insurance"."main"."dim_date__dbt_backup" cascade
+    
+[0m16:08:43.177629 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.178314 [debug] [Thread-1 (]: On model.insurance.dim_date: Close
+[0m16:08:43.178591 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105709160>]}
+[0m16:08:43.178899 [info ] [Thread-1 (]: 4 of 6 OK created sql table model main.dim_date ................................ [[32mOK[0m in 0.02s]
+[0m16:08:43.179173 [debug] [Thread-1 (]: Finished running node model.insurance.dim_date
+[0m16:08:43.179374 [debug] [Thread-1 (]: Began running node model.insurance.fct_claims
+[0m16:08:43.179617 [info ] [Thread-1 (]: 5 of 6 START sql table model main.fct_claims ................................... [RUN]
+[0m16:08:43.179822 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.dim_date, now model.insurance.fct_claims)
+[0m16:08:43.180003 [debug] [Thread-1 (]: Began compiling node model.insurance.fct_claims
+[0m16:08:43.181363 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.fct_claims"
+[0m16:08:43.181756 [debug] [Thread-1 (]: Began executing node model.insurance.fct_claims
+[0m16:08:43.183356 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.fct_claims"
+[0m16:08:43.183703 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:08:43.183885 [debug] [Thread-1 (]: On model.insurance.fct_claims: BEGIN
+[0m16:08:43.184052 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:43.184429 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.184643 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:08:43.184848 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."fct_claims__dbt_tmp"
+  
+    as (
+      select
+    claim_id,                       -- the fact's own key (one row per claim)
+
+    -- foreign keys -> dimensions
+    policy_id,                      -- joins to dim_policy
+    claim_type,                     -- joins to dim_claim_type
+    claim_date,                     -- joins to dim_date
+
+    -- measures (the numbers we analyze)
+    claim_amount,
+    severity_band,
+
+    status
+from "insurance"."main"."stg_claims"
+    );
+  
+  
+[0m16:08:43.185594 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:43.186210 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:08:43.186492 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_claims'
+  
+[0m16:08:43.186909 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.187537 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:08:43.187725 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'fct_claims'
+  
+[0m16:08:43.188130 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.189721 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:08:43.189919 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+alter table "insurance"."main"."fct_claims" rename to "fct_claims__dbt_backup"
+[0m16:08:43.190218 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.191722 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:08:43.191949 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+alter table "insurance"."main"."fct_claims__dbt_tmp" rename to "fct_claims"
+[0m16:08:43.192436 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.193421 [debug] [Thread-1 (]: On model.insurance.fct_claims: COMMIT
+[0m16:08:43.193615 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:08:43.193787 [debug] [Thread-1 (]: On model.insurance.fct_claims: COMMIT
+[0m16:08:43.194322 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.195494 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.fct_claims"
+[0m16:08:43.195676 [debug] [Thread-1 (]: On model.insurance.fct_claims: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.fct_claims"} */
+
+      drop table if exists "insurance"."main"."fct_claims__dbt_backup" cascade
+    
+[0m16:08:43.196085 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.196747 [debug] [Thread-1 (]: On model.insurance.fct_claims: Close
+[0m16:08:43.197021 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f68f50>]}
+[0m16:08:43.197331 [info ] [Thread-1 (]: 5 of 6 OK created sql table model main.fct_claims .............................. [[32mOK[0m in 0.02s]
+[0m16:08:43.197603 [debug] [Thread-1 (]: Finished running node model.insurance.fct_claims
+[0m16:08:43.197808 [debug] [Thread-1 (]: Began running node model.insurance.dim_policy
+[0m16:08:43.198046 [info ] [Thread-1 (]: 6 of 6 START sql table model main.dim_policy ................................... [RUN]
+[0m16:08:43.198257 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance.fct_claims, now model.insurance.dim_policy)
+[0m16:08:43.198434 [debug] [Thread-1 (]: Began compiling node model.insurance.dim_policy
+[0m16:08:43.199883 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance.dim_policy"
+[0m16:08:43.200299 [debug] [Thread-1 (]: Began executing node model.insurance.dim_policy
+[0m16:08:43.201917 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance.dim_policy"
+[0m16:08:43.202267 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:08:43.202445 [debug] [Thread-1 (]: On model.insurance.dim_policy: BEGIN
+[0m16:08:43.202611 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:43.203115 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.203330 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:08:43.203527 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+  
+    
+    
+
+    create  table
+      "insurance"."main"."dim_policy__dbt_tmp"
+  
+    as (
+      select
+    policy_id,          -- the key other tables join to
+    policyholder,
+    state,
+    product_type,
+    premium_tier,
+    annual_premium,
+    status
+from "insurance"."main"."stg_policies"
+    );
+  
+  
+[0m16:08:43.204223 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:43.204863 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:08:43.205048 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_policy'
+  
+[0m16:08:43.205445 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.206066 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:08:43.206250 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'dim_policy'
+  
+[0m16:08:43.206665 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.209984 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:08:43.210296 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+alter table "insurance"."main"."dim_policy" rename to "dim_policy__dbt_backup"
+[0m16:08:43.210735 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.212286 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:08:43.212478 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+alter table "insurance"."main"."dim_policy__dbt_tmp" rename to "dim_policy"
+[0m16:08:43.212785 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.213643 [debug] [Thread-1 (]: On model.insurance.dim_policy: COMMIT
+[0m16:08:43.213826 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:08:43.213992 [debug] [Thread-1 (]: On model.insurance.dim_policy: COMMIT
+[0m16:08:43.214501 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.215689 [debug] [Thread-1 (]: Using duckdb connection "model.insurance.dim_policy"
+[0m16:08:43.215908 [debug] [Thread-1 (]: On model.insurance.dim_policy: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "model.insurance.dim_policy"} */
+
+      drop table if exists "insurance"."main"."dim_policy__dbt_backup" cascade
+    
+[0m16:08:43.216376 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:43.217102 [debug] [Thread-1 (]: On model.insurance.dim_policy: Close
+[0m16:08:43.217396 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb658f5c-fa71-4aba-a64a-e4e7ced99a55', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ea1370>]}
+[0m16:08:43.217711 [info ] [Thread-1 (]: 6 of 6 OK created sql table model main.dim_policy .............................. [[32mOK[0m in 0.02s]
+[0m16:08:43.217990 [debug] [Thread-1 (]: Finished running node model.insurance.dim_policy
+[0m16:08:43.218578 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:08:43.218743 [debug] [MainThread]: On master: BEGIN
+[0m16:08:43.218883 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:08:43.219192 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:08:43.219341 [debug] [MainThread]: On master: COMMIT
+[0m16:08:43.219484 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:08:43.219622 [debug] [MainThread]: On master: COMMIT
+[0m16:08:43.219855 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:08:43.220043 [debug] [MainThread]: On master: Close
+[0m16:08:43.220253 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:08:43.220400 [debug] [MainThread]: Connection 'model.insurance.dim_policy' was properly closed.
+[0m16:08:43.220587 [info ] [MainThread]: 
+[0m16:08:43.220762 [info ] [MainThread]: Finished running 6 table models in 0 hours 0 minutes and 0.28 seconds (0.28s).
+[0m16:08:43.221356 [debug] [MainThread]: Command end result
+[0m16:08:43.237006 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m16:08:43.238093 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m16:08:43.241185 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ankita/insurance-platform/transform/target/run_results.json
+[0m16:08:43.241413 [info ] [MainThread]: 
+[0m16:08:43.241781 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:08:43.241981 [info ] [MainThread]: 
+[0m16:08:43.242171 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m16:08:43.244087 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.7994289, "process_in_blocks": "0", "process_kernel_time": 0.233785, "process_mem_max_rss": "156008448", "process_out_blocks": "0", "process_user_time": 1.279057}
+[0m16:08:43.244355 [debug] [MainThread]: Command `dbt run` succeeded at 16:08:43.244310 after 0.80 seconds
+[0m16:08:43.244560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ae09b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10485b170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d32720>]}
+[0m16:08:43.244761 [debug] [MainThread]: Flushing usage events
+[0m16:08:44.823973 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:08:45.845973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077a9010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103fa690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103fa3c0>]}
+
+
+============================== 16:08:45.848687 | 8bb0b010-fa70-486e-a4c6-d4f44c664b5c ==============================
+[0m16:08:45.848687 [info ] [MainThread]: Running with dbt=1.11.11
+[0m16:08:45.849073 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '.', 'log_format': 'default', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/ankita/insurance-platform/transform/logs', 'use_experimental_parser': 'False', 'quiet': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'introspect': 'True', 'static_parser': 'True', 'debug': 'False', 'use_colors': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'version_check': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'write_json': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'warn_error': 'None', 'target_path': 'None', 'log_cache_events': 'False'}
+[0m16:08:45.966536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8bb0b010-fa70-486e-a4c6-d4f44c664b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111fe420>]}
+[0m16:08:45.997447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8bb0b010-fa70-486e-a4c6-d4f44c664b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077a9010>]}
+[0m16:08:45.998511 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:08:46.062701 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m16:08:46.118907 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:08:46.119181 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:08:46.119341 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:08:46.139068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8bb0b010-fa70-486e-a4c6-d4f44c664b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112bb2c0>]}
+[0m16:08:46.180799 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m16:08:46.182018 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m16:08:46.192534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8bb0b010-fa70-486e-a4c6-d4f44c664b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120141d0>]}
+[0m16:08:46.192848 [info ] [MainThread]: Found 6 models, 7 data tests, 485 macros
+[0m16:08:46.193052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8bb0b010-fa70-486e-a4c6-d4f44c664b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11128d130>]}
+[0m16:08:46.194146 [info ] [MainThread]: 
+[0m16:08:46.194358 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:08:46.194519 [info ] [MainThread]: 
+[0m16:08:46.194789 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:08:46.197325 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_insurance_main'
+[0m16:08:46.224498 [debug] [ThreadPool]: Using duckdb connection "list_insurance_main"
+[0m16:08:46.224879 [debug] [ThreadPool]: On list_insurance_main: BEGIN
+[0m16:08:46.225074 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:08:46.233322 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m16:08:46.233578 [debug] [ThreadPool]: Using duckdb connection "list_insurance_main"
+[0m16:08:46.233757 [debug] [ThreadPool]: On list_insurance_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "connection_name": "list_insurance_main"} */
+select
+      'insurance' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'insurance'
+  
+[0m16:08:46.235819 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:08:46.236724 [debug] [ThreadPool]: On list_insurance_main: ROLLBACK
+[0m16:08:46.237450 [debug] [ThreadPool]: Failed to rollback 'list_insurance_main'
+[0m16:08:46.237629 [debug] [ThreadPool]: On list_insurance_main: Close
+[0m16:08:46.238484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8bb0b010-fa70-486e-a4c6-d4f44c664b5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11128d190>]}
+[0m16:08:46.238799 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:08:46.238976 [debug] [MainThread]: On master: BEGIN
+[0m16:08:46.239137 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:08:46.239465 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:08:46.239626 [debug] [MainThread]: On master: COMMIT
+[0m16:08:46.239773 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:08:46.239914 [debug] [MainThread]: On master: COMMIT
+[0m16:08:46.240126 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:08:46.240274 [debug] [MainThread]: On master: Close
+[0m16:08:46.241332 [debug] [Thread-1 (]: Began running node test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440
+[0m16:08:46.241586 [info ] [Thread-1 (]: 1 of 7 START test accepted_values_stg_claims_severity_band__small__medium__large__catastrophic  [RUN]
+[0m16:08:46.241832 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_insurance_main, now test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440)
+[0m16:08:46.242022 [debug] [Thread-1 (]: Began compiling node test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440
+[0m16:08:46.251506 [debug] [Thread-1 (]: Writing injected SQL for node "test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440"
+[0m16:08:46.252346 [debug] [Thread-1 (]: Began executing node test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440
+[0m16:08:46.262492 [debug] [Thread-1 (]: Writing runtime sql for node "test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440"
+[0m16:08:46.263232 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440"
+[0m16:08:46.263462 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440: BEGIN
+[0m16:08:46.263653 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:46.264046 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.264237 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440"
+[0m16:08:46.264435 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        severity_band as value_field,
+        count(*) as n_records
+
+    from "insurance"."main"."stg_claims"
+    group by severity_band
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'small','medium','large','catastrophic'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:08:46.266094 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:46.268423 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440: ROLLBACK
+[0m16:08:46.268981 [debug] [Thread-1 (]: Failed to rollback 'test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440'
+[0m16:08:46.269186 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440: Close
+[0m16:08:46.269511 [info ] [Thread-1 (]: 1 of 7 PASS accepted_values_stg_claims_severity_band__small__medium__large__catastrophic  [[32mPASS[0m in 0.03s]
+[0m16:08:46.269803 [debug] [Thread-1 (]: Finished running node test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440
+[0m16:08:46.270014 [debug] [Thread-1 (]: Began running node test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f
+[0m16:08:46.270245 [info ] [Thread-1 (]: 2 of 7 START test accepted_values_stg_claims_status__approved__pending__denied . [RUN]
+[0m16:08:46.270463 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insurance.accepted_values_stg_claims_severity_band__small__medium__large__catastrophic.9f62a3f440, now test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f)
+[0m16:08:46.270647 [debug] [Thread-1 (]: Began compiling node test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f
+[0m16:08:46.273607 [debug] [Thread-1 (]: Writing injected SQL for node "test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f"
+[0m16:08:46.274244 [debug] [Thread-1 (]: Began executing node test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f
+[0m16:08:46.275539 [debug] [Thread-1 (]: Writing runtime sql for node "test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f"
+[0m16:08:46.276031 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f"
+[0m16:08:46.276281 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f: BEGIN
+[0m16:08:46.276482 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:46.276874 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.277060 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f"
+[0m16:08:46.277259 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from "insurance"."main"."stg_claims"
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'approved','pending','denied'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:08:46.278279 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:46.279328 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f: ROLLBACK
+[0m16:08:46.279863 [debug] [Thread-1 (]: Failed to rollback 'test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f'
+[0m16:08:46.280061 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f: Close
+[0m16:08:46.280382 [info ] [Thread-1 (]: 2 of 7 PASS accepted_values_stg_claims_status__approved__pending__denied ....... [[32mPASS[0m in 0.01s]
+[0m16:08:46.280671 [debug] [Thread-1 (]: Finished running node test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f
+[0m16:08:46.280877 [debug] [Thread-1 (]: Began running node test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0
+[0m16:08:46.281119 [info ] [Thread-1 (]: 3 of 7 START test accepted_values_stg_policies_premium_tier__budget__standard__premium  [RUN]
+[0m16:08:46.281384 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insurance.accepted_values_stg_claims_status__approved__pending__denied.518de2861f, now test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0)
+[0m16:08:46.281594 [debug] [Thread-1 (]: Began compiling node test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0
+[0m16:08:46.284740 [debug] [Thread-1 (]: Writing injected SQL for node "test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0"
+[0m16:08:46.285206 [debug] [Thread-1 (]: Began executing node test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0
+[0m16:08:46.286546 [debug] [Thread-1 (]: Writing runtime sql for node "test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0"
+[0m16:08:46.287108 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0"
+[0m16:08:46.287333 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0: BEGIN
+[0m16:08:46.287516 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:46.287915 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.288112 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0"
+[0m16:08:46.288318 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        premium_tier as value_field,
+        count(*) as n_records
+
+    from "insurance"."main"."stg_policies"
+    group by premium_tier
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'budget','standard','premium'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:08:46.289110 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:46.289928 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0: ROLLBACK
+[0m16:08:46.290435 [debug] [Thread-1 (]: Failed to rollback 'test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0'
+[0m16:08:46.290617 [debug] [Thread-1 (]: On test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0: Close
+[0m16:08:46.290951 [info ] [Thread-1 (]: 3 of 7 PASS accepted_values_stg_policies_premium_tier__budget__standard__premium  [[32mPASS[0m in 0.01s]
+[0m16:08:46.291250 [debug] [Thread-1 (]: Finished running node test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0
+[0m16:08:46.291484 [debug] [Thread-1 (]: Began running node test.insurance.not_null_stg_claims_claim_id.f8032ece86
+[0m16:08:46.291716 [info ] [Thread-1 (]: 4 of 7 START test not_null_stg_claims_claim_id ................................. [RUN]
+[0m16:08:46.292150 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insurance.accepted_values_stg_policies_premium_tier__budget__standard__premium.d0db977ff0, now test.insurance.not_null_stg_claims_claim_id.f8032ece86)
+[0m16:08:46.292397 [debug] [Thread-1 (]: Began compiling node test.insurance.not_null_stg_claims_claim_id.f8032ece86
+[0m16:08:46.295978 [debug] [Thread-1 (]: Writing injected SQL for node "test.insurance.not_null_stg_claims_claim_id.f8032ece86"
+[0m16:08:46.296604 [debug] [Thread-1 (]: Began executing node test.insurance.not_null_stg_claims_claim_id.f8032ece86
+[0m16:08:46.298768 [debug] [Thread-1 (]: Writing runtime sql for node "test.insurance.not_null_stg_claims_claim_id.f8032ece86"
+[0m16:08:46.299189 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.not_null_stg_claims_claim_id.f8032ece86"
+[0m16:08:46.299376 [debug] [Thread-1 (]: On test.insurance.not_null_stg_claims_claim_id.f8032ece86: BEGIN
+[0m16:08:46.299542 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:46.299922 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.300092 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.not_null_stg_claims_claim_id.f8032ece86"
+[0m16:08:46.300270 [debug] [Thread-1 (]: On test.insurance.not_null_stg_claims_claim_id.f8032ece86: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "test.insurance.not_null_stg_claims_claim_id.f8032ece86"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select claim_id
+from "insurance"."main"."stg_claims"
+where claim_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:08:46.300792 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.301636 [debug] [Thread-1 (]: On test.insurance.not_null_stg_claims_claim_id.f8032ece86: ROLLBACK
+[0m16:08:46.302165 [debug] [Thread-1 (]: Failed to rollback 'test.insurance.not_null_stg_claims_claim_id.f8032ece86'
+[0m16:08:46.302357 [debug] [Thread-1 (]: On test.insurance.not_null_stg_claims_claim_id.f8032ece86: Close
+[0m16:08:46.302665 [info ] [Thread-1 (]: 4 of 7 PASS not_null_stg_claims_claim_id ....................................... [[32mPASS[0m in 0.01s]
+[0m16:08:46.302951 [debug] [Thread-1 (]: Finished running node test.insurance.not_null_stg_claims_claim_id.f8032ece86
+[0m16:08:46.303154 [debug] [Thread-1 (]: Began running node test.insurance.not_null_stg_policies_policy_id.83c6a6a32c
+[0m16:08:46.303380 [info ] [Thread-1 (]: 5 of 7 START test not_null_stg_policies_policy_id .............................. [RUN]
+[0m16:08:46.303627 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insurance.not_null_stg_claims_claim_id.f8032ece86, now test.insurance.not_null_stg_policies_policy_id.83c6a6a32c)
+[0m16:08:46.303817 [debug] [Thread-1 (]: Began compiling node test.insurance.not_null_stg_policies_policy_id.83c6a6a32c
+[0m16:08:46.338844 [debug] [Thread-1 (]: Writing injected SQL for node "test.insurance.not_null_stg_policies_policy_id.83c6a6a32c"
+[0m16:08:46.339340 [debug] [Thread-1 (]: Began executing node test.insurance.not_null_stg_policies_policy_id.83c6a6a32c
+[0m16:08:46.340504 [debug] [Thread-1 (]: Writing runtime sql for node "test.insurance.not_null_stg_policies_policy_id.83c6a6a32c"
+[0m16:08:46.341051 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.not_null_stg_policies_policy_id.83c6a6a32c"
+[0m16:08:46.341284 [debug] [Thread-1 (]: On test.insurance.not_null_stg_policies_policy_id.83c6a6a32c: BEGIN
+[0m16:08:46.341604 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:46.342028 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.342211 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.not_null_stg_policies_policy_id.83c6a6a32c"
+[0m16:08:46.342395 [debug] [Thread-1 (]: On test.insurance.not_null_stg_policies_policy_id.83c6a6a32c: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "test.insurance.not_null_stg_policies_policy_id.83c6a6a32c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select policy_id
+from "insurance"."main"."stg_policies"
+where policy_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:08:46.342917 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.343733 [debug] [Thread-1 (]: On test.insurance.not_null_stg_policies_policy_id.83c6a6a32c: ROLLBACK
+[0m16:08:46.344250 [debug] [Thread-1 (]: Failed to rollback 'test.insurance.not_null_stg_policies_policy_id.83c6a6a32c'
+[0m16:08:46.344434 [debug] [Thread-1 (]: On test.insurance.not_null_stg_policies_policy_id.83c6a6a32c: Close
+[0m16:08:46.344727 [info ] [Thread-1 (]: 5 of 7 PASS not_null_stg_policies_policy_id .................................... [[32mPASS[0m in 0.04s]
+[0m16:08:46.345006 [debug] [Thread-1 (]: Finished running node test.insurance.not_null_stg_policies_policy_id.83c6a6a32c
+[0m16:08:46.345207 [debug] [Thread-1 (]: Began running node test.insurance.unique_stg_claims_claim_id.0e20e780e5
+[0m16:08:46.345437 [info ] [Thread-1 (]: 6 of 7 START test unique_stg_claims_claim_id ................................... [RUN]
+[0m16:08:46.345692 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insurance.not_null_stg_policies_policy_id.83c6a6a32c, now test.insurance.unique_stg_claims_claim_id.0e20e780e5)
+[0m16:08:46.345896 [debug] [Thread-1 (]: Began compiling node test.insurance.unique_stg_claims_claim_id.0e20e780e5
+[0m16:08:46.349066 [debug] [Thread-1 (]: Writing injected SQL for node "test.insurance.unique_stg_claims_claim_id.0e20e780e5"
+[0m16:08:46.349476 [debug] [Thread-1 (]: Began executing node test.insurance.unique_stg_claims_claim_id.0e20e780e5
+[0m16:08:46.350678 [debug] [Thread-1 (]: Writing runtime sql for node "test.insurance.unique_stg_claims_claim_id.0e20e780e5"
+[0m16:08:46.351039 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.unique_stg_claims_claim_id.0e20e780e5"
+[0m16:08:46.351228 [debug] [Thread-1 (]: On test.insurance.unique_stg_claims_claim_id.0e20e780e5: BEGIN
+[0m16:08:46.351437 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:46.351827 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.352006 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.unique_stg_claims_claim_id.0e20e780e5"
+[0m16:08:46.352191 [debug] [Thread-1 (]: On test.insurance.unique_stg_claims_claim_id.0e20e780e5: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "test.insurance.unique_stg_claims_claim_id.0e20e780e5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    claim_id as unique_field,
+    count(*) as n_records
+
+from "insurance"."main"."stg_claims"
+where claim_id is not null
+group by claim_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:08:46.353121 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:46.354054 [debug] [Thread-1 (]: On test.insurance.unique_stg_claims_claim_id.0e20e780e5: ROLLBACK
+[0m16:08:46.354551 [debug] [Thread-1 (]: Failed to rollback 'test.insurance.unique_stg_claims_claim_id.0e20e780e5'
+[0m16:08:46.354723 [debug] [Thread-1 (]: On test.insurance.unique_stg_claims_claim_id.0e20e780e5: Close
+[0m16:08:46.355014 [info ] [Thread-1 (]: 6 of 7 PASS unique_stg_claims_claim_id ......................................... [[32mPASS[0m in 0.01s]
+[0m16:08:46.355287 [debug] [Thread-1 (]: Finished running node test.insurance.unique_stg_claims_claim_id.0e20e780e5
+[0m16:08:46.355487 [debug] [Thread-1 (]: Began running node test.insurance.unique_stg_policies_policy_id.cb33dd12e6
+[0m16:08:46.355668 [info ] [Thread-1 (]: 7 of 7 START test unique_stg_policies_policy_id ................................ [RUN]
+[0m16:08:46.355926 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insurance.unique_stg_claims_claim_id.0e20e780e5, now test.insurance.unique_stg_policies_policy_id.cb33dd12e6)
+[0m16:08:46.356141 [debug] [Thread-1 (]: Began compiling node test.insurance.unique_stg_policies_policy_id.cb33dd12e6
+[0m16:08:46.358394 [debug] [Thread-1 (]: Writing injected SQL for node "test.insurance.unique_stg_policies_policy_id.cb33dd12e6"
+[0m16:08:46.358955 [debug] [Thread-1 (]: Began executing node test.insurance.unique_stg_policies_policy_id.cb33dd12e6
+[0m16:08:46.360289 [debug] [Thread-1 (]: Writing runtime sql for node "test.insurance.unique_stg_policies_policy_id.cb33dd12e6"
+[0m16:08:46.360749 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.unique_stg_policies_policy_id.cb33dd12e6"
+[0m16:08:46.360972 [debug] [Thread-1 (]: On test.insurance.unique_stg_policies_policy_id.cb33dd12e6: BEGIN
+[0m16:08:46.361149 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:08:46.361530 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:08:46.361709 [debug] [Thread-1 (]: Using duckdb connection "test.insurance.unique_stg_policies_policy_id.cb33dd12e6"
+[0m16:08:46.361898 [debug] [Thread-1 (]: On test.insurance.unique_stg_policies_policy_id.cb33dd12e6: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "insurance", "target_name": "dev", "node_id": "test.insurance.unique_stg_policies_policy_id.cb33dd12e6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    policy_id as unique_field,
+    count(*) as n_records
+
+from "insurance"."main"."stg_policies"
+where policy_id is not null
+group by policy_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:08:46.362769 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:08:46.363658 [debug] [Thread-1 (]: On test.insurance.unique_stg_policies_policy_id.cb33dd12e6: ROLLBACK
+[0m16:08:46.364194 [debug] [Thread-1 (]: Failed to rollback 'test.insurance.unique_stg_policies_policy_id.cb33dd12e6'
+[0m16:08:46.364397 [debug] [Thread-1 (]: On test.insurance.unique_stg_policies_policy_id.cb33dd12e6: Close
+[0m16:08:46.364710 [info ] [Thread-1 (]: 7 of 7 PASS unique_stg_policies_policy_id ...................................... [[32mPASS[0m in 0.01s]
+[0m16:08:46.364990 [debug] [Thread-1 (]: Finished running node test.insurance.unique_stg_policies_policy_id.cb33dd12e6
+[0m16:08:46.365551 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:08:46.365717 [debug] [MainThread]: On master: BEGIN
+[0m16:08:46.365858 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:08:46.366131 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:08:46.366284 [debug] [MainThread]: On master: COMMIT
+[0m16:08:46.366429 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:08:46.366572 [debug] [MainThread]: On master: COMMIT
+[0m16:08:46.366784 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:08:46.366932 [debug] [MainThread]: On master: Close
+[0m16:08:46.367115 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:08:46.367255 [debug] [MainThread]: Connection 'test.insurance.unique_stg_policies_policy_id.cb33dd12e6' was properly closed.
+[0m16:08:46.367418 [info ] [MainThread]: 
+[0m16:08:46.367580 [info ] [MainThread]: Finished running 7 data tests in 0 hours 0 minutes and 0.17 seconds (0.17s).
+[0m16:08:46.368221 [debug] [MainThread]: Command end result
+[0m16:08:46.383796 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/ankita/insurance-platform/transform/target/manifest.json
+[0m16:08:46.384956 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/ankita/insurance-platform/transform/target/semantic_manifest.json
+[0m16:08:46.388327 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/ankita/insurance-platform/transform/target/run_results.json
+[0m16:08:46.388525 [info ] [MainThread]: 
+[0m16:08:46.388737 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:08:46.388916 [info ] [MainThread]: 
+[0m16:08:46.389098 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m16:08:46.390718 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.58638537, "process_in_blocks": "0", "process_kernel_time": 0.171902, "process_mem_max_rss": "159006720", "process_out_blocks": "0", "process_user_time": 1.180165}
+[0m16:08:46.391014 [debug] [MainThread]: Command `dbt test` succeeded at 16:08:46.390966 after 0.59 seconds
+[0m16:08:46.391269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102336de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dfe000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112828a0>]}
+[0m16:08:46.391588 [debug] [MainThread]: Flushing usage events
+[0m16:08:47.463221 [debug] [MainThread]: An error was encountered while trying to flush usage events

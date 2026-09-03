@@ -65,6 +65,7 @@
     <a href="#l3">L3 · dbt</a>
     <a href="#l4">L4 · Data quality</a>
     <a href="#l5">L5 · Dimensional modeling</a>
+    <a href="#l6">L6 · Orchestration</a>
     <a href="#sql">SQL toolbox</a>
     <a href="#gotchas">Gotchas</a>
     <h2>Interview</h2>
@@ -256,6 +257,37 @@ models/marts/    dim_policy, dim_claim_type, dim_date, fct_claims</pre>
 <span class="kw">GROUP BY</span> p.product_type <span class="kw">ORDER BY</span> total_claimed <span class="kw">DESC</span></pre>
     <p>Every business question is the same move: join fact to dimension(s) → group by dimension attributes → aggregate the measure.</p>
     <div class="iv"><div class="lbl">Interview-ready · fact table</div><p>fct_claims is my fact table at claim grain — one row per claim, holding the claim_amount measure and foreign keys to dim_policy, dim_claim_type, and dim_date. Analytical questions become a join from the fact to the relevant dimensions with a group-by and aggregate — for example, total claim amount by product type joins fct_claims to dim_policy.</p></div>
+  </div>
+
+  <h2 class="lesson" id="l6">Lesson 6 — Orchestration (Prefect) <span class="pill">done</span></h2>
+  <p class="sub">Run the pipeline steps as a scheduled, retrying DAG — no human needed.</p>
+  <div class="card">
+    <h3>Why</h3>
+    <p>Real pipelines run automatically on a schedule, in order, and recover from transient failures. An orchestrator does this. Concepts transfer to Airflow/Dagster.</p>
+    <h3>Core concepts</h3>
+    <table>
+      <tr><td>Task</td><td>one step (a @task function)</td></tr>
+      <tr><td>Flow / DAG</td><td>the whole pipeline + task order</td></tr>
+      <tr><td>Dependency</td><td>wait_for=[...] — B runs only after A</td></tr>
+      <tr><td>Retry</td><td>retries=2 — auto re-run a failed task</td></tr>
+      <tr><td>Schedule</td><td>cron, e.g. 0 2 * * * = daily 2am</td></tr>
+    </table>
+    <h4>My pipeline as a DAG</h4>
+    <pre>load_claims ──▶ load_policies ──▶ dbt_run ──▶ dbt_test
+(sequential loaders: DuckDB is single-writer, so parallel writes clash)</pre>
+    <pre><span class="kw">@task</span>(retries=<span class="str">2</span>)
+<span class="kw">def</span> load_claims(): subprocess.run([...], check=<span class="kw">True</span>)
+
+<span class="kw">@flow</span>(name=<span class="str">"insurance-pipeline"</span>, log_prints=<span class="kw">True</span>)
+<span class="kw">def</span> insurance_pipeline():
+    claims = load_claims.submit()
+    policies = load_policies.submit(wait_for=[claims])
+    run = dbt_run.submit(wait_for=[claims, policies])
+    test = dbt_test.submit(wait_for=[run])
+    test.result()   <span class="cmt"># flow must BLOCK on terminal task or it gets cancelled</span></pre>
+    <div class="tip"><b>Two gotchas I hit:</b> (1) a flow must wait on its final task (<code>.result()</code>) or Prefect cancels it when the flow exits. (2) Parallel loaders clashed on DuckDB's single-writer lock — a retry recovered it automatically, but sequential is the correct fix for an embedded DB (parallel is fine on Snowflake/Postgres).</div>
+    <div class="why"><b>Live win:</b> a loader hit a lock, failed, and Prefect auto-retried it to success — resilience I'd otherwise handle by hand. That's the point of orchestration.</div>
+    <div class="iv"><div class="lbl">Interview-ready · orchestration</div><p>I orchestrated my pipeline with Prefect: loaders, dbt run, and dbt test as tasks in a DAG with explicit dependencies and automatic retries. A loader hit a transient DB lock and Prefect retried it to success. I scheduled it with cron (0 2 * * * for nightly). Tasks, DAGs, retries, scheduling transfer directly to Airflow.</p></div>
   </div>
 
   <!-- SQL TOOLBOX -->
