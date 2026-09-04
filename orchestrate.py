@@ -38,4 +38,6 @@ def insurance_pipeline():
     test.result()
 
 if __name__ == "__main__":
-    insurance_pipeline()
+    
+        # Runs the flow on a schedule. cron "0 2 * * *" = every day at 2am.
+        insurance_pipeline.serve(name="nightly-insurance", cron="0 2 * * *")

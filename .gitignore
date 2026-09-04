@@ -1,3 +1,20 @@
+# Python
 .venv/
 __pycache__/
+
+# Databases (rebuilt from source, not tracked)
 data/*.duckdb
+*.duckdb
+
+# dbt build artifacts
+transform/target/
+transform/logs/
+transform/dbt_packages/
+
+# macOS clutter
+.DS_Store
+
+# Personal CV files — NEVER push (contain personal contact details)
+docs/CV.md
+docs/cv.html
+docs/Ankita_CV.pdf
