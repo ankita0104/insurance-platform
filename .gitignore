@@ -14,8 +14,10 @@ transform/dbt_packages/
 # macOS clutter
 .DS_Store
 
-# Personal CV files — NEVER push (contain personal contact details)
-docs/CV.md
-docs/cv.html
-docs/Ankita_CV.pdf
+# Personal CV / resume files — NEVER push (contain personal contact details)
+# Broad patterns to catch all current AND future resume variants:
+docs/CV*.md
+docs/cv*.html
+docs/*CV*.pdf
+docs/Ankita_CV*.pdf
 transform/.user.yml
