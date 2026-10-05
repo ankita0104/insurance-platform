@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Data Engineering Kitchen — One-Page Reference</title>
+<style>
+  :root{--bg:#f4f6fb;--surface:#fff;--text:#1f2733;--muted:#5b6675;--border:#e2e8f0;
+    --brand:#2563eb;--brand-soft:#e8f0fe;--shadow:0 1px 3px rgba(16,24,40,.08),0 6px 18px rgba(16,24,40,.06);
+    --have:#16a34a;--have-soft:#e6f6ec;--accent:#d97706;--accent-soft:#fdf0db;}
+  html[data-theme="dark"]{--bg:#0f1623;--surface:#18212f;--text:#e6ebf2;--muted:#9aa6b6;--border:#2a3647;
+    --brand:#60a5fa;--brand-soft:#1b2942;--shadow:0 1px 3px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    --have-soft:#14301f;--accent-soft:#33260f;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .topbar{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--border);
+    padding:13px 20px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow);}
+  .topbar h1{font-size:1rem;margin:0;flex:1;}
+  .theme-btn{border:1px solid var(--border);background:var(--bg);color:var(--text);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:.85rem;}
+  .wrap{max-width:900px;margin:0 auto;padding:22px 20px 70px;}
+  .hero{margin-bottom:14px;}
+  .hero h2{margin:0 0 6px;font-size:1.45rem;}
+  .hero p{margin:0;color:var(--muted);}
+  .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0 6px;font-size:.82rem;color:var(--muted);}
+  .flow b{color:var(--text);}
+  .station{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:14px 18px;margin-bottom:12px;border-left:5px solid var(--brand);}
+  .station.super{border-left-color:var(--have);}
+  .station h3{margin:0 0 2px;font-size:1.1rem;}
+  .kitchen{color:var(--accent);font-style:italic;font-size:.86rem;margin:0 0 8px;}
+  .skill{margin:6px 0;font-size:.92rem;}
+  .skill b{color:var(--text);}
+  .have{color:var(--have);font-weight:700;}
+  .diff{background:var(--brand-soft);border-radius:8px;padding:8px 12px;margin-top:8px;font-size:.86rem;}
+  .diff b{color:var(--brand);}
+  .cross{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:14px 18px;margin-bottom:12px;border-left:5px solid var(--accent);}
+  .takeaway{background:var(--have-soft);border-left:5px solid var(--have);border-radius:12px;padding:16px 20px;margin-top:16px;}
+  .takeaway b{color:var(--have);}
+  .footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:30px;}
+  h2.sec{font-size:1.2rem;margin:24px 0 8px;}
+</style>
+</head>
+<body>
+<div class="topbar"><h1>The Data Engineering Kitchen</h1><button class="theme-btn" id="themeBtn">Dark</button></div>
+<div class="wrap">
+  <div class="hero">
+    <h2>The whole field, as one kitchen</h2>
+    <p>Every "scary skill" is just a station in a kitchen that turns raw data into finished answers. ✅ = you've already used it. For any new tool you meet, just ask: "which station is this?"</p>
+    <div class="flow">
+      <b>Delivery door</b> → <b>Fridge</b> → <b>Prep &amp; cook</b> → <b>Plating</b> → <b>Safety check</b> → <b>Serve</b>
+      &nbsp;|&nbsp; across all: <b>head chef, the building, the recipe book</b>
+    </div>
+  </div>
+
+  <h2 class="sec">The 6 stations (the data's journey)</h2>
+
+  <div class="station">
+    <h3>🚪 1. Delivery door — getting data IN (ingestion)</h3>
+    <p class="kitchen">The back door where ingredients are delivered.</p>
+    <div class="skill"><b>REST API</b> <span class="have">✅</span> — pull data from another system over the internet.</div>
+    <div class="skill"><b>Files (CSV, etc.)</b> <span class="have">✅</span> — data dropped as files (your claims). Most common in enterprises.</div>
+    <div class="skill"><b>Kafka</b> — a conveyor belt for data arriving continuously (real-time).</div>
+    <div class="skill"><b>AWS Firehose / Kinesis</b> — Amazon's version of that conveyor belt.</div>
+    <div class="skill"><b>Airbyte / Fivetran</b> — ready-made connectors so you don't hand-code ingestion.</div>
+    <div class="skill"><b>AWS Glue</b> — managed tool that can ingest and transform.</div>
+    <div class="diff"><b>How they differ:</b> Files/API = batch (chunks). Kafka/Firehose = streaming (continuous). Airbyte/Fivetran = pre-built connectors vs writing your own loader.</div>
+  </div>
+
+  <div class="station">
+    <h3>🧊 2. Fridge — storing data</h3>
+    <p class="kitchen">Where you keep ingredients until you cook.</p>
+    <div class="skill"><b>Data Warehouse</b> — organized fridge for fast SQL analysis: <b>Snowflake</b> <span class="have">✅ (your job)</span>, BigQuery, Redshift.</div>
+    <div class="skill"><b>Data Lake</b> — cheap storage for raw files of any kind: <b>S3</b>.</div>
+    <div class="skill"><b>Lakehouse</b> — both at once: <b>Databricks</b>, via <b>Delta Lake</b> / <b>Apache Iceberg</b>.</div>
+    <div class="skill"><b>Database (OLTP)</b> — the small fast fridge an app uses live: Postgres, MySQL.</div>
+    <div class="diff"><b>How they differ:</b> Warehouse = structured + fast SQL (analysis). Lake = cheap + any format. Lakehouse = both. Database = runs the live app, not analytics.</div>
+  </div>
+
+  <div class="station">
+    <h3>🔪🍳 3. Prep &amp; cook — transforming data (the biggest station)</h3>
+    <p class="kitchen">Washing, chopping, and cooking raw ingredients into dishes.</p>
+    <div class="skill"><b>SQL</b> <span class="have">✅</span> — the core language for shaping data. The knife every cook needs.</div>
+    <div class="skill"><b>dbt</b> <span class="have">✅</span> — organizes SQL transforms (tested, documented) inside the warehouse.</div>
+    <div class="skill"><b>Python</b> <span class="have">✅</span> — general-purpose glue for custom logic.</div>
+    <div class="skill"><b>Apache Spark / PySpark</b> — industrial stove for cooking enormous data across many machines.</div>
+    <div class="skill"><b>Databricks</b> — a managed kitchen built around Spark.</div>
+    <div class="skill"><b>Scala</b> — alternative Spark language (PySpark more common).</div>
+    <div class="skill"><b>Hadoop / Hive / HBase</b> — the old industrial stove (pre-Spark). Legacy; know the words only.</div>
+    <div class="diff"><b>How they differ:</b> dbt = SQL transforms on data already in a warehouse. Spark/PySpark = heavy lifting on massive data too big for one machine. Python = custom glue. Hadoop = the outdated Spark.</div>
+  </div>
+
+  <div class="station">
+    <h3>🍽️ 4. Plating &amp; menu — data modeling</h3>
+    <p class="kitchen">Arranging food so it's easy to order and serve.</p>
+    <div class="skill"><b>Dimensional (Kimball)</b> <span class="have">✅</span> — star schema (fact + dimensions), built for easy analytics.</div>
+    <div class="skill"><b>3NF / Normalization</b> — split data to avoid duplication; for live apps (OLTP).</div>
+    <div class="skill"><b>SCD (Slowly Changing Dimensions)</b> — track history when something changes.</div>
+    <div class="skill"><b>Data Vault</b> — complex enterprise method for huge, audited orgs.</div>
+    <div class="diff"><b>How they differ:</b> Normalization = no redundancy, for apps. Dimensional = easy querying, for analytics. Data Vault = enterprise history. SCD = the "remember the past" technique.</div>
+  </div>
+
+  <div class="station super">
+    <h3>🔬 5. Food-safety inspector — data quality (your superpower)</h3>
+    <p class="kitchen">Checking food is safe before it leaves.</p>
+    <div class="skill"><b>dbt tests</b> <span class="have">✅</span> — rules in your transforms (not null, unique, allowed values).</div>
+    <div class="skill"><b>Observability</b> <span class="have">✅</span> — monitoring data health over time (freshness/volume/schema/distribution).</div>
+    <div class="skill"><b>Great Expectations / Soda / Deequ</b> — dedicated data-quality frameworks.</div>
+    <div class="diff"><b>How they differ:</b> dbt tests = quick rules during transform. GE/Soda = specialized heavier DQ tools. Observability = watching trends to catch "something looks off."</div>
+  </div>
+
+  <div class="station">
+    <h3>🍴 6. Serving the customer — consumption / BI</h3>
+    <p class="kitchen">The finished dish on the customer's table.</p>
+    <div class="skill"><b>Power BI / Tableau</b> — dashboards for non-technical people.</div>
+    <div class="skill"><b>Looker</b> — similar, with a modeling layer (Google).</div>
+    <div class="skill"><b>Superset</b> — free, open-source dashboards.</div>
+    <div class="skill"><b>RAG / GenAI</b> — serving data to AI to answer questions (your medical project!).</div>
+    <div class="diff"><b>How they differ:</b> Power BI/Tableau/Superset/Looker all make dashboards — just different vendors. RAG = serving data to an AI instead of a human.</div>
+  </div>
+
+  <h2 class="sec">The roles that run across the whole kitchen</h2>
+
+  <div class="cross">
+    <h3>👨‍🍳 The head chef — orchestration</h3>
+    <p class="kitchen">Coordinates which station runs when, and restarts failed ones.</p>
+    <div class="skill"><b>Airflow</b> — industry-standard (code-based), most common in job posts.</div>
+    <div class="skill"><b>Prefect</b> <span class="have">✅</span> — simpler, more Pythonic (you used this).</div>
+    <div class="skill"><b>Azure Data Factory</b> — Microsoft's, more drag-and-drop. &nbsp; <b>Dagster</b> — modern newcomer.</div>
+    <div class="diff"><b>How they differ:</b> all schedule + run pipelines. Airflow = standard, Prefect = friendlier, ADF = Azure/GUI, Dagster = new.</div>
+  </div>
+
+  <div class="cross">
+    <h3>🏢 The building &amp; utilities — cloud</h3>
+    <p class="kitchen">The premises everything runs in.</p>
+    <div class="skill"><b>AWS</b> — most common. Services: <b>S3</b> (storage), <b>Glue</b> (ETL), <b>Lambda</b> (run code on demand), <b>Redshift</b> (warehouse).</div>
+    <div class="skill"><b>Azure</b> — Microsoft's cloud (common with Databricks). &nbsp; <b>GCP</b> — Google's (BigQuery).</div>
+    <div class="diff"><b>How they differ:</b> three competing providers, same concepts. Learn one (AWS) deeply; the rest transfer.</div>
+  </div>
+
+  <div class="cross">
+    <h3>📖 The recipe book &amp; engineering discipline</h3>
+    <p class="kitchen">Tracked recipes, consistent process, portable setup.</p>
+    <div class="skill"><b>Git / GitHub</b> <span class="have">✅</span> — track every change (your repo).</div>
+    <div class="skill"><b>CI/CD</b> — automatically test code every time you change it.</div>
+    <div class="skill"><b>Docker</b> — package your setup so it runs identically anywhere.</div>
+    <div class="skill"><b>Terraform (IaC)</b> — set up cloud infrastructure with code instead of clicking.</div>
+    <div class="diff"><b>How they differ:</b> Git = history, CI/CD = auto-testing, Docker = portability, Terraform = building the cloud setup.</div>
+  </div>
+
+  <div class="cross">
+    <h3>🔧 The knife skills — languages used everywhere</h3>
+    <div class="skill"><b>SQL</b> <span class="have">✅</span> (asking data questions) &nbsp;·&nbsp; <b>Python</b> <span class="have">✅</span> (general logic) &nbsp;·&nbsp; <b>Scala</b> (Spark alternative).</div>
+  </div>
+
+  <div class="takeaway">
+    <b>The calm takeaway:</b> count your ✅'s — you've touched a station in almost every row. The "big scary list" of 30+ tools collapses into <b>6 stations + 4 cross-roles</b>. Any new tool you meet, just ask: <b>"which station is this?"</b> — and you'll instantly know what it does and what it compares to. You are not behind. There is no race.
+  </div>
+
+  <div class="footer">data-platform &middot; the kitchen map &middot; light / dark toggle</div>
+</div>
+<script>
+  const b=document.getElementById("themeBtn");const s=localStorage.getItem("de_theme")||"light";
+  document.documentElement.setAttribute("data-theme",s);b.textContent=s==="light"?"Dark":"Light";
+  b.addEventListener("click",()=>{const n=document.documentElement.getAttribute("data-theme")==="light"?"dark":"light";
+    document.documentElement.setAttribute("data-theme",n);localStorage.setItem("de_theme",n);b.textContent=n==="light"?"Dark":"Light";});
+</script>
+</body>
+</html>

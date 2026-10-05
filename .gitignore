@@ -2,9 +2,11 @@
 .venv/
 __pycache__/
 
-# Databases (rebuilt from source, not tracked)
+# Databases & generated output (rebuilt from source, not tracked)
 data/*.duckdb
 *.duckdb
+data/claims_metrics/
+*.parquet
 
 # dbt build artifacts
 transform/target/
